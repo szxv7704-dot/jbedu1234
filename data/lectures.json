@@ -1,4 +1,9 @@
 {
-  "updated": null,
+  "updated": "2026-11-11",
+  "chat": {
+    "title": "강의 소통방",
+    "desc": "강의 중에 질문하고 자료를 나누는 채팅방입니다.",
+    "url": "https://jbedu123.lovable.app/"
+  },
   "items": []
 }
