@@ -7,19 +7,20 @@
   --f:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
 }
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);word-break:keep-all}
+html,body{margin:0;overflow-x:clip;background:var(--bg);color:var(--ink);font-family:var(--f);word-break:keep-all}
 a{color:inherit}
 .wrap{max-width:920px;margin:0 auto;padding:0 16px 80px}
 /* 위 띠: 사이트 안 이동 */
 .top{padding:22px 0 0}
 .top small{display:block;font-size:13px;color:var(--soft);line-height:1.6}
-.tabs{display:flex;gap:4px;margin:14px -16px 0;padding:0 16px;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.tabs{display:flex;gap:4px;margin:14px calc(50% - 50vw) 0;padding:0 calc(50vw - 50%);border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
 .tabs::-webkit-scrollbar{display:none}
 .tabs a{flex:none;padding:12px 14px 13px;font-size:16px;font-weight:700;text-decoration:none;color:var(--soft);border-bottom:3px solid transparent;margin-bottom:-1px}
+.tabs a:first-child{margin-left:-14px}
 .tabs a[aria-current=page]{color:var(--acc);border-bottom-color:var(--acc)}
 .tabs .sep{flex:none;width:1px;margin:14px 6px;background:var(--line)}
-/* 머리말 */
-.hero{margin:0 -16px;padding:40px 16px 36px;background:var(--acc-bg);border-bottom:1px solid var(--acc-line)}
+/* 머리말: 띠는 화면 양 끝까지, 글은 본문 폭에 맞춘다 */
+.hero{margin:0 calc(50% - 50vw);padding:40px calc(50vw - 50%) 36px;background:var(--acc-bg);border-bottom:1px solid var(--acc-line)}
 .hero h1{margin:0;font-size:clamp(30px,6vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2}
 .hero h1 em{font-style:normal;color:var(--acc)}
 .hero p{margin:12px 0 0;font-size:16px;line-height:1.7;color:var(--soft);max-width:56ch}
@@ -85,6 +86,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset
 @media (max-width:560px){
   .tabs{gap:0}
   .tabs a{padding:12px 10px 13px;font-size:15px}
+  .tabs a:first-child{margin-left:-10px}
   .tabs .sep{margin:14px 4px}
   .chat{grid-template-columns:auto 1fr}
   .chat .btn{grid-column:1 / -1}
