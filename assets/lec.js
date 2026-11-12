@@ -110,7 +110,7 @@ fetch('data/' + P.data, {cache: 'no-cache'}).then(r => r.json()).then(d => {
   $('#total').textContent = n ? n + '개' : '';
   if (page === 'deck' && n) {
     const k = d.items.filter(x => stateOf(x) === 'done').length, s = d.items.filter(x => stateOf(x) && stateOf(x) !== 'done').length;
-    $('#summary').textContent = `강의 ${n}개` + (k ? ` · 완료 ${k}` : '') + (s ? ` · 예정 ${s}` : '');
+    if (k || s) $('#summary').textContent = `강의 ${n}개` + (k ? ` · 완료 ${k}` : '') + (s ? ` · 예정 ${s}` : '');   // 날짜 없는 강의만이면 제목 옆 개수로 충분
   }
   if (d.updated) $('#stamp').textContent = ' · ' + fmt(d.updated).replace(/\(.\)$/, '') + ' 기준';
   render();

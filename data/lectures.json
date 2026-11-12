@@ -1,9 +1,24 @@
 {
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "chat": {
     "title": "강의 소통방",
     "desc": "강의 중에 질문하고 자료를 나누는 채팅방입니다.",
     "url": "https://jbedu123.lovable.app/"
   },
-  "items": []
+  "items": [
+    {
+      "id": "ai-work-simplify",
+      "title": "집중력 강해지는 AI연수",
+      "time": "1~3차시 · 120분(30·50·40분)",
+      "audience": "AI를 처음 쓰는 교직원",
+      "desc": "AI 업무 간소화 연수. AI가 어디까지 왔는지 알고, 연수 계획안을 받아 발표자료를 만들어 디자인을 입히고, 그 사이 한글파일 받기와 데이터 분석(개인정보 가리기)까지 해 봅니다.",
+      "tags": [
+        "발표자료",
+        "한글파일",
+        "데이터 분석",
+        "개인정보 가리기"
+      ],
+      "deck": "lectures/ai-work-simplify/slides.html"
+    }
+  ]
 }
