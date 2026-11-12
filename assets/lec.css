@@ -18,6 +18,11 @@ a{color:inherit}
 .tabs a{flex:none;padding:12px 14px 13px;font-size:16px;font-weight:700;text-decoration:none;color:var(--soft);border-bottom:3px solid transparent;margin-bottom:-1px}
 .tabs a:first-child{margin-left:-14px}
 .tabs a[aria-current=page]{color:var(--acc);border-bottom-color:var(--acc)}
+/* 바깥 사이트로 가는 단추: 탭 줄 오른쪽 끝, 새 창 */
+.tabs a.ext{margin:8px 0 8px auto;padding:0 12px;display:inline-flex;align-items:center;gap:5px;min-height:36px;align-self:center;
+  border:1px solid var(--acc-line);border-radius:999px;background:var(--acc-bg);color:var(--acc);font-size:14px;border-bottom-width:1px}
+.tabs a.ext:hover{border-color:var(--acc)}
+.tabs a.ext svg{width:15px;height:15px}
 .tabs .sep{flex:none;width:1px;margin:14px 6px;background:var(--line)}
 /* 머리말: 띠는 화면 양 끝까지, 글은 본문 폭에 맞춘다 */
 .hero{margin:0 calc(50% - 50vw);padding:40px calc(50vw - 50%) 36px;background:var(--acc-bg);border-bottom:1px solid var(--acc-line)}
@@ -87,6 +92,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset
   .tabs{gap:0}
   .tabs a{padding:12px 10px 13px;font-size:15px}
   .tabs a:first-child{margin-left:-10px}
+  .tabs a.ext{padding:0 10px;font-size:13.5px;margin-left:12px}
   .tabs .sep{margin:14px 4px}
   .chat{grid-template-columns:auto 1fr}
   .chat .btn{grid-column:1 / -1}
@@ -97,3 +103,5 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media print{.tabs,.seg,.chat{display:none}.hero{background:none}.item{break-inside:avoid}}
+/* 아주 좁은 화면(360px 안팎): 바깥 단추의 아이콘을 빼서 탭 줄이 한 화면에 들어가게 */
+@media (max-width:380px){.tabs a.ext{margin-left:6px;padding:0 9px}.tabs a.ext svg{display:none}}
