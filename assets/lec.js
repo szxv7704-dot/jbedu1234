@@ -39,6 +39,7 @@ const CARD = {
   deck(x){
     const s = stateOf(x), a = [];
     if (x.deck) a.push(`<a class="btn" href="${esc(href(x.deck))}" target="_blank" rel="noopener">강의안 열기 ${ICON.out}</a>`);
+    if (x.id === 'ai-work-simplify') a.push('<a class="btn ghost" href="#practice">실습 자료 받기</a>');
     if (x.pdf) a.push(`<a class="btn ghost" href="${esc(href(x.pdf))}" download>${ICON.down} PDF</a>`);
     if (x.video) a.push(`<a class="btn ghost" href="videos.html#${esc(x.video)}">${ICON.video} 강의 영상</a>`);
     a.push(...files(x));
