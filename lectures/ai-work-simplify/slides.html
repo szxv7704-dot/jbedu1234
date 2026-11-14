@@ -501,7 +501,7 @@ em{font-style:normal;color:var(--accent)}
 .hx-sum b{font-weight:400;color:var(--accent);background:linear-gradient(transparent 60%,#FFE9A6 60%,#FFE9A6 92%,transparent 92%);padding:0 6px}
 .hx-src{left:80px;top:798px;font-size:12.5px;line-height:1.5}
 
-/* ---------- AI로 줄이는 일 (활용 통합) ---------- */
+/* ---------- AI로 줄일 수 있는 일 (활용 통합) ---------- */
 .gn{position:absolute;top:226px;width:700px;height:446px;padding:22px 28px;border:2.5px solid var(--ink);border-radius:30px 11px 26px 13px/13px 26px 11px 30px;box-shadow:var(--shadow)}
 .gn-a{left:80px;background:var(--sky)}.gn-b{left:820px;background:var(--mint)}
 .gn .lb{display:flex;align-items:baseline;gap:12px;margin:0}
@@ -932,6 +932,19 @@ em{font-style:normal;color:var(--accent)}
 #orderForm li.cur{background:color-mix(in srgb,var(--prompt-color) 45%,transparent)}
 #orderForm li.cur:before{background:var(--prompt-color)}
 #orderBox span.on{background:var(--prompt-color);box-shadow:0 0 0 3px var(--prompt-color)}
+
+/* 2026-11-14: 설명 한 장 → 실습 신호 → 생성 대기 중 업무팁 */
+.band .sec{font-size:25px;font-family:var(--f-title)}.band .sec b{font-size:21px}.band .plan{font-size:18px}
+#sOrder .prompt .box{min-height:0;padding:20px 22px;font-size:24px;line-height:1.65}#sOrder .prompt{top:284px}
+.goal-extra{font-size:24px;gap:18px}.goal-extra b{width:100%}.goal-extra small{font-size:20px}
+@keyframes buoyant{0%,100%{transform:translateY(0) scale(1) rotate(-1deg)}25%{transform:translateY(-9px) scale(1.035) rotate(1deg)}40%{transform:translate(-2px,-5px) scale(1.015) rotate(-1deg)}50%{transform:translate(2px,-11px) scale(1.045) rotate(1deg)}65%{transform:translate(-1px,-5px) scale(1.02) rotate(-.5deg)}80%{transform:translateY(3px) scale(.985) rotate(0)}}
+.buoyant{display:inline-block;transform-origin:center;will-change:transform}.slide.active .buoyant{animation:buoyant 2.4s ease-in-out infinite}
+.cue-slide .in{display:flex;align-items:center;justify-content:center}.cue-word{margin:0;font:140px/1.2 var(--f-title);color:var(--accent);text-shadow:4px 7px #E7D4AD}.cue-pg{position:absolute;bottom:36px;right:80px;font-size:15px;color:var(--sub)}
+.practice-layout{position:absolute;left:80px;right:80px;top:224px;display:grid;grid-template-columns:970px 1fr;gap:40px}.practice-prompts{display:grid;gap:20px}.practice-prompts article{background:white;border:2px solid var(--ink);border-radius:20px;padding:20px 25px;box-shadow:var(--shadow)}.prompt-label{display:flex;justify-content:space-between;align-items:center;font:25px var(--f-title)}.prompt-label span{color:var(--accent2);font-size:21px}.practice-copy{font-size:27px;line-height:1.65;margin:15px 0 11px;word-break:keep-all}.practice-copy span{background:var(--c)}.practice-prompts small{font-size:19px;color:var(--sub)}.practice-beacon{align-self:center;text-align:center}.practice-beacon strong{font:100px var(--f-title);color:var(--accent);text-shadow:3px 5px #E7D4AD}.practice-beacon p{font:27px/1.8 var(--f-title);margin-top:38px}
+.tip-intro{position:absolute;left:80px;top:210px;width:560px}.tip-word{font:105px var(--f-title);color:var(--accent);text-shadow:3px 5px #E7D4AD}.tip-intro h2{font:52px/1.3 var(--f-title);margin:34px 0 25px}.tip-intro p{font-size:26px;line-height:1.6}.tip-intro>small{font-size:20px;color:var(--sub)}
+.demo-chat{position:absolute;background:#FFFCF6;border:2.5px solid var(--ink);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}.hwpx-chat{left:700px;right:80px;top:226px;min-height:490px}.demo-chat-head{padding:18px 22px;border-bottom:2px solid var(--ink);background:var(--sky);font:24px var(--f-title);display:flex;justify-content:space-between;gap:12px;align-items:center}.demo-chat-head small{font:17px var(--f-body);color:var(--sub)}.demo-chat-body{padding:24px;display:flex;flex-direction:column;gap:20px}.bubble{margin:0;padding:20px 24px;border-radius:18px;font-size:27px;line-height:1.5}.bubble.user{align-self:flex-end;background:var(--ink);color:#fff;max-width:95%;border-bottom-right-radius:4px}.bubble.assistant{align-self:flex-start;background:#EAF0E1;border:1px solid #BECCAA;max-width:96%;border-bottom-left-radius:4px}.bubble p{margin:0 0 15px}.bubble small{font-size:19px;opacity:.8}.file-card{display:flex;gap:18px;align-items:center}.file-card>b{display:grid;place-items:center;background:white;border:2px solid var(--ink);border-radius:9px;padding:15px 9px;color:var(--accent2);font:22px var(--f-title)}.file-card strong{display:block;font:25px var(--f-title)}.file-card small{display:block;margin-top:6px;font-size:18px}.file-card>span{font-size:35px}.demo-caption{font-size:18px;color:var(--sub);line-height:1.6;margin:8px 0 0}.inline-tip{font-style:normal}
+.review-priority{position:absolute;left:80px;top:160px;width:570px}.review-tag{font:24px var(--f-title);background:var(--sky);padding:12px 18px;border-radius:99px}.review-priority h2{font:63px/1.3 var(--f-title);margin:35px 0 26px}.review-priority p{font-size:27px}.review-priority ol{padding-left:32px;font-size:26px;line-height:1.9}.review-priority>small{font-size:21px;color:var(--sub)}.design-chat{left:700px;right:80px;top:130px}.design-chat .demo-chat-body{gap:12px;padding:18px}.design-chat .bubble{padding:13px 19px;font-size:24px;line-height:1.4}.design-chat .file-card>b{padding:10px 7px;font-size:19px}.design-chat .file-card strong{font-size:23px}.design-chat .file-card small{font-size:17px}.correction>b{font-size:20px}.correction p{font-size:21px;line-height:1.35;margin:9px 0}.correction small{font-size:16px}.design-chat .demo-chat-head{font-size:22px;padding:15px 18px}
+@media(prefers-reduced-motion:reduce){.slide.active .buoyant{animation:none!important;transform:none!important}}
 </style>
 </head>
 <body>
@@ -952,9 +965,9 @@ em{font-style:normal;color:var(--accent)}
 <div class="login-reminder">지금 준비: ChatGPT·Claude 로그인 → 두 서비스의 새 대화 입력 화면 열기 · 보조 강사가 도와드립니다.</div></section>
 
 <section class="slide " id="sGoal" data-title="오늘의 목표" data-steps="1" data-sess="1" data-min="1"><div class="in"><header class="band"><div class="sec"><b>GOAL</b>오늘의 목표</div><div class="plan">집중력 강해지는 AI연수 · 1차시</div></header><h2 class="ttl">오늘 가져갈 것은 <em>발표자료 한 편</em>입니다</h2>
-<div class="goal-output"><span class="label">핵심 결과물 · HTML 1개</span><h3>계획안으로 만들고, 디자인을 입혀<br>내 컴퓨터에서 열리는 발표자료</h3><p>내용을 확인하고 수정한 뒤, 내려받아 직접 열어 봅니다.</p></div>
+<div class="goal-output"><span class="label">핵심 결과물 · HTML 1개</span><h3>계획안을 만들고, 디자인을 입혀<br>내 컴퓨터에서 열리는 발표자료</h3><p>내용을 확인하고 수정한 뒤, 내려받아 직접 열어 봅니다.</p></div>
 <div class="goal-path"><b>본 과정</b> 업무지시 <i>→</i> 생성 <i>→</i> 확인 <i>→</i> 수정 <i>→</i> 저장·공유</div>
-<div class="goal-extra" data-step="1"><b>생성 대기 중 확장 활동</b><span>④ 한글파일 받기</span><span>⑤ 개인정보를 가린 데이터 분석</span><small>다시 돌아오면 발표자료 완성이 먼저입니다.</small></div><footer class="foot"><span>AI 업무 간소화 연수 · 1차시</span><span class="pg"></span></footer></div><div class="login-reminder">로그인 준비 중 · ChatGPT와 Claude 새 대화 화면을 열어 두세요. 막히면 보조 강사에게 알려 주세요.</div></section>
+<div class="goal-extra" data-step="1"><b>생성 대기 중 업무팁</b><span>④ 계획안 AI한테 한글파일로 받기</span><span>⑤ 데이터 분석 AI에게 시키기</span><small>다시 돌아오면 발표자료 완성이 먼저입니다.</small></div><footer class="foot"><span>AI 업무 간소화 연수 · 1차시</span><span class="pg"></span></footer></div><div class="login-reminder">로그인 준비 중 · ChatGPT와 Claude 새 대화 화면을 열어 두세요. 막히면 보조 강사에게 알려 주세요.</div></section>
 
 <section class="slide part" data-title="PART 1 간지" data-min="0.5" data-steps="0" id="sPart1">
 <div class="in">
@@ -962,7 +975,7 @@ em{font-style:normal;color:var(--accent)}
   <p class="pt-no">PART 1 / 3</p>
   <h2 class="pt-title">AI, <span class="hl">우리 삶에</span><br>어디까지 왔나</h2>
   <p class="pt-q"><b>Q.</b>AI, 지금 어디까지 할 수 있을까?</p>
-  <ol class="pt-in"><li><b>01</b>AI 변천사</li><li><b>02</b>AI로 줄이는 일</li><li><b>03</b>이것도 할 수 있어요</li></ol>
+  <ol class="pt-in"><li><b>01</b>AI 변천사</li><li><b>02</b>AI로 줄일 수 있는 일</li><li><b>03</b>AI, 이것도 할 수 있어요</li></ol>
   <div class="pt-track"><span class="now">PART 1 · AI, 우리 삶에 어디까지 왔나</span><span class="">PART 2 · AI 알고 쓰기</span><span class="">PART 3 · AI에 일 맡기는 법</span></div>
   <div class="pt-big" style="--fill:var(--sky)">1</div>
   <footer class="foot"><span>AI 업무 간소화 연수 · 1차시</span><span class="pg">03</span></footer>
@@ -987,9 +1000,9 @@ em{font-style:normal;color:var(--accent)}
 </div>
 <div class="login-reminder">로그인 준비 중 · ChatGPT와 Claude 새 대화 화면을 열어 두세요. 막히면 보조 강사에게 알려 주세요.</div></section>
 
-<section class="slide" data-title="AI로 줄이는 일" data-min="3" data-steps="3" id="sGain">
+<section class="slide" data-title="AI로 줄일 수 있는 일" data-min="3" data-steps="3" id="sGain">
 <div class="in">
-  <header class="band"><div class="sec"><b>02</b>AI로 줄이는 일</div><div class="plan"><span>PART 1 · AI, 우리 삶에 어디까지 왔나</span><span class="scale"><i></i><i></i><i></i><i></i><i></i></span></div></header>
+  <header class="band"><div class="sec"><b>02</b>AI로 줄일 수 있는 일</div><div class="plan"><span>PART 1 · AI, 우리 삶에 어디까지 왔나</span><span class="scale"><i></i><i></i><i></i><i></i><i></i></span></div></header>
   <h2 class="ttl">AI를 쓰면 <em>내 시간</em>이 이렇게 돌아옵니다</h2>
   <div class="gn gn-a" data-step="1">
     <p class="lb"><b>반복 업무를 줄입니다</b><span>엑셀 · 명단 · 자료 정리</span></p>
@@ -1020,7 +1033,7 @@ em{font-style:normal;color:var(--accent)}
 
 <section class="slide" data-title="국민의례" data-min="1" data-steps="1" id="sCeremony">
 <div class="in">
-  <header class="band"><div class="sec"><b>03</b>이것도 할 수 있어요</div><div class="plan"><span>PART 1 · AI, 우리 삶에 어디까지 왔나</span><span class="scale"><i></i><i></i><i></i><i></i><i></i></span></div></header>
+  <header class="band"><div class="sec"><b>03</b>AI, 이것도 할 수 있어요</div><div class="plan"><span>PART 1 · AI, 우리 삶에 어디까지 왔나</span><span class="scale"><i></i><i></i><i></i><i></i><i></i></span></div></header>
   <div class="flag-wrap">
     <svg viewBox="-36 -24 72 48" role="img" aria-label="태극기">
       <defs><path id="tgBar" fill="#000" d="M-6-26H6v2H-6Zm0 3H6v2H-6Zm0 3H6v2H-6Z"/></defs>
@@ -1343,62 +1356,14 @@ em{font-style:normal;color:var(--accent)}
 </div>
 <aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>본 과정 · ② 만들기</strong></div><div><small>지금 열 화면</small><strong>ChatGPT 새 대화</strong></div><div><small>지금 할 일</small><strong>계획안 요청 준비</strong></div><div><small>완료 기준</small><strong>대화 입력 가능</strong></div></aside></section>
 
-<section class="slide guided" data-title="첫 업무 · 계획안 받기" data-min="8" data-steps="2" data-sess="2">
-<div class="in">
-  <header class="band"><div class="sec"><b>②</b>발표자료 딸깍 만들기</div><div class="plan"><span>2차시 · 첫 업무</span><span class="scale"><i></i><i></i><i></i><i></i><i></i></span></div></header>
-  <h2 class="ttl">신규직원의 <em>첫 업무</em> · 연수 계획안 받아 오기</h2>
-  <div class="mis">
-    <p class="mis-tag"><b>따라 치기</b>상황 / 참고자료 / 결과물 / 기준으로 생각합니다</p>
-    <p class="mis-box"><span class="seg" style="--c:#FBC9B6" data-l="상황">동료 교직원에게 AI 활용 연수를 열려고 해.</span> <span class="seg" style="--c:#FBC9B6" data-l="상황">대상은 AI를 처음 쓰는 교직원 30명, 시간은 2시간이야.</span> <span class="seg" style="--c:#CDE6B8" data-l="결과물">연수 계획안을 표로 짜 줘.</span> <span class="seg" style="--c:#FFE08A" data-l="기준">쉬운 말로, A4 한 장으로.</span></p>
-    <p class="mis-foot">이번에는 참고자료가 없습니다. 대상·시간 등 조건을 알려 줍니다.</p>
-  </div>
-  <div class="win" style="left:860px;top:226px;width:660px;height:546px">
-    <div class="win-hd"><i></i><i></i><i></i><span class="url">chatgpt.com</span></div>
-    <div class="win-bd chat">
-      <p class="cb">…연수 계획안을 표로 짜 줘.</p>
-      <div class="ca" data-step="1"><b>AI 활용 연수 계획(안)</b>
-        <table class="mini"><tr><th>차시</th><th>내용</th><th>시간</th></tr><tr><td>1</td><td>AI 이해하기</td><td>30분</td></tr><tr><td>2</td><td>발표자료 만들기</td><td>50분</td></tr><tr><td>3</td><td>업무에 써 보기</td><td>40분</td></tr></table></div>
-      <p class="cb" data-step="2">2차시를 실습 위주로 바꿔 줘</p>
-      <p class="ca" data-step="2">네, 실습 중심으로 바꿨습니다 ✓</p>
-    </div>
-  </div>
-  <footer class="foot"><span>AI 업무 간소화 연수 · 2차시</span><span class="pg">20</span></footer>
-</div>
-<aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>본 과정 · ② 만들기</strong></div><div><small>지금 열 화면</small><strong>ChatGPT 현재 대화</strong></div><div><small>지금 할 일</small><strong>계획안 요청·확인</strong></div><div><small>완료 기준</small><strong>대상·시간 확인</strong></div></aside></section>
+<section class="slide guided practice-plan" id="sPlanPractice" data-title="실습중 · 계획안에서 HTML까지" data-min="4" data-steps="0" data-sess="2"><div class="in"><header class="band"><div class="sec"><b>GUIDE</b>계획안 → HTML 발표자료</div><div class="plan">집중력 강해지는 AI연수 · 2차시</div></header>
+<h2 class="ttl">계획안을 만들고, <em>바로 HTML로</em></h2>
+<div class="practice-layout"><div class="practice-prompts">
+<article><div class="prompt-label"><b>01 · 연수 계획안 받아오기</b><span>따라 치기</span></div><p class="practice-copy"><span style="--c:#FBC9B6">동료 교직원에게 AI 활용 연수를 열려고 해. 대상은 AI를 처음 쓰는 교직원 30명, 시간은 2시간이야.</span> <span style="--c:#CDE6B8">연수 계획안을 표로 짜 줘.</span> <span style="--c:#FFE08A">쉬운 말로, A4 한 장으로.</span></p><small>참고자료 없이 시작합니다. 받은 계획안의 대상·시간·내용을 확인하세요.</small></article>
+<article><div class="prompt-label"><b>02 · 같은 대화에서 HTML로 바꾸기</b><span>이어서 보내기</span></div><p class="practice-copy"><span style="--c:#BFDDF3">방금 만든 계획안을 바탕으로</span> <span style="--c:#CDE6B8">강의장 화면용 HTML 발표자료를 만들어 줘. 10장 이내, 파일 하나로.</span> <span style="--c:#FFE08A">한 장에 핵심 세 줄, 화살표 키로 넘길 수 있게.</span></p><small>계획안이 이번 요청의 참고자료입니다. 생성 요청 후 이 대화를 그대로 두세요.</small></article>
+</div><div class="practice-beacon"><strong class="buoyant">실습중</strong><p>계획안 확인<br>↓<br>같은 대화에서 HTML 요청</p></div></div><footer class="foot"><span>집중력 강해지는 AI연수 · 2차시</span><span class="pg"></span></footer></div><aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>본 과정 · ② 만들기</strong></div><div><small>지금 열 화면</small><strong>ChatGPT 새 대화</strong></div><div><small>지금 할 일</small><strong>계획안 확인 → HTML 요청</strong></div><div><small>완료 기준</small><strong>HTML 생성 요청 전송</strong></div></aside></section>
 
-<section class="slide transition " id="trGenerate" data-title="본 과정 · 계획안에서 발표자료로" data-steps="0" data-sess="2" data-min="0.5"><div class="in"><header class="band"><div class="sec"><b>GUIDE</b>본 과정 · 계획안에서 발표자료로</div><div class="plan">집중력 강해지는 AI연수 · 2차시</div></header><div class="transition-route"><b>본 과정</b><span>② 만들기 · 계획안 → 슬라이드</span><small>목적지: 발표자료 한 편</small></div>
-<h2 class="transition-title">그 계획안을<br><em>같은 대화에서</em> 발표자료로</h2>
-<div class="transition-grid"><article class="priority"><span>지금 최우선</span><h3>HTML 발표자료 생성 요청</h3><p><b>열 화면</b> 계획안을 만든 ChatGPT 대화</p></article><article><span>원래 작업</span><h3>받은 계획안을 확인한 단계</h3><p><b>그대로 둘 것</b> 현재 대화와 계획안 유지</p></article></div>
-<div class="transition-return"><b>다음 기준</b>요청을 보낸 뒤, 강사의 안내에 맞춰 확장 활동으로 이동</div><footer class="foot"><span>AI 업무 간소화 연수 · 2차시</span><span class="pg"></span></footer></div></section>
-
-<section class="slide guided" data-title="두 번째 업무 · 슬라이드로" data-min="4" data-steps="4" data-sess="2">
-<div class="in">
-  <header class="band"><div class="sec"><b>②</b>발표자료 딸깍 만들기</div><div class="plan"><span>2차시 · 두 번째 업무</span><span class="scale"><i></i><i></i><i></i><i></i><i></i></span></div></header>
-  <h2 class="ttl"><em>두 번째 업무</em> · 그 계획안을 슬라이드로</h2>
-  <div class="tf">
-    <div class="tf-doc"><b>연수 계획(안)</b><i></i><i></i><i></i><i></i><span>방금 받은 계획안</span></div>
-    <div class="tf-arr"><em>딸깍</em><svg viewBox="0 0 150 40"><path d="M4 20h126M112 6l20 14-20 14" fill="none" stroke="#3B2A22" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    <div class="tf-fan"><div><b></b><i></i><i></i></div><div><b></b><i></i><i></i></div><div><b></b><i></i><i></i></div><span>HTML 슬라이드 10장</span></div>
-  </div>
-  <p class="say-big">같은 대화창에 이어서<b>“방금 만든 계획안으로 강의장 화면용 HTML 슬라이드를 만들어 줘. 10장 이내, 파일 하나로. 한 장에 핵심 세 줄, 화살표 키로 넘길 수 있게.”</b></p>
-  <div class="count"><span data-step="1">하나</span><span data-step="2">둘</span><span data-step="3">셋</span><b data-step="4">전송!<svg viewBox="0 0 60 60"><path d="M4 30L56 6 40 54 28 36z M28 36L56 6" fill="#fff" stroke="#3B2A22" stroke-width="3.5" stroke-linejoin="round"/></svg></b></div>
-  <footer class="foot"><span>AI 업무 간소화 연수 · 2차시</span><span class="pg">21</span></footer>
-</div>
-<aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>본 과정 · ② 만들기</strong></div><div><small>지금 열 화면</small><strong>계획안 ChatGPT 대화</strong></div><div><small>지금 할 일</small><strong>HTML 생성 요청</strong></div><div><small>완료 기준</small><strong>요청 전송 확인</strong></div></aside></section>
-
-<section class="slide transition detour" id="trHwp" data-title="대기 중 확장 활동 · 생성 대기 중 한글파일" data-steps="0" data-sess="2" data-min="0.5"><div class="in"><header class="band"><div class="sec"><b>GUIDE</b>대기 중 확장 활동 · 생성 대기 중 한글파일</div><div class="plan">집중력 강해지는 AI연수 · 2차시</div></header><div class="transition-route"><b>대기 중 확장 활동</b><span>② 만들기 → ④ 한글파일 · 샛길</span><small>목적지: 발표자료 한 편</small></div>
-<h2 class="transition-title">발표자료를 요청했습니다.<br>잠시 <em>한글파일</em>을 받아 봅니다</h2>
-<div class="transition-grid"><article class="priority"><span>지금 최우선</span><h3>강사 안내에 따라 파일 기능 확인</h3><p><b>열 화면</b> Claude + 실습용 한글 양식</p></article><article><span>원래 작업</span><h3>발표자료 생성 요청 후 대기</h3><p><b>그대로 둘 것</b> 발표자료를 요청한 ChatGPT 대화</p></article></div>
-<div class="transition-return"><b>복귀 안내</b>강사가 복귀를 안내하면 원래 대화로 → 확인·수정·저장</div><footer class="foot"><span>AI 업무 간소화 연수 · 2차시</span><span class="pg"></span></footer></div></section>
-
-<section class="slide guided" data-title="영상 · AI 전공 대결" data-min="1" data-steps="0" data-sess="2" data-video="battle">
-<div class="in">
-  <header class="band"><div class="sec"><b>④</b>AI한테 한글파일 받기</div><div class="plan"><span>AI마다 잘하는 일이 다릅니다</span><span class="scale"><i></i><i></i><i></i><i></i><i></i></span></div></header>
-  <div class="vid"><video controls preload="metadata" playsinline></video>
-    <div class="ph"><b>VIDEO</b><h3>AI 전공 대결</h3><p>영상이 준비되지 않았거나 재생되지 않습니다.<br>강사의 화면 시연을 보며 다음 실습을 준비해 주세요.<span data-vname hidden></span></p></div></div>
-  <footer class="foot"><span>AI 업무 간소화 연수 · 2차시</span><span class="pg">23</span></footer>
-</div>
-<aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>대기 중 확장 활동 · ④</strong></div><div><small>지금 열 화면</small><strong>Claude / 실습 양식</strong></div><div><small>지금 할 일</small><strong>강사 안내로 파일 실습</strong></div><div><small>완료 기준</small><strong>파일 열기 또는 시연 확인</strong></div></aside></section>
+<section class="slide cue-slide" id="goMake" data-title="실습하러 가기" data-min="18" data-steps="0" data-sess="2"><div class="in"><h2 class="cue-word buoyant">실습하러 가기</h2><span class="pg cue-pg"></span></div></section>
 
 <section class="slide guided" data-title="영상 · 한글파일 받기" data-min="2" data-steps="0" data-sess="2" data-video="hwp">
 <div class="in">
@@ -1407,38 +1372,42 @@ em{font-style:normal;color:var(--accent)}
     <div class="ph"><b>VIDEO</b><h3>AI한테 한글파일 받기</h3><p>영상이 준비되지 않았거나 재생되지 않습니다.<br>강사의 화면 시연을 보며 다음 실습을 준비해 주세요.<span data-vname hidden></span></p></div></div>
   <footer class="foot"><span>AI 업무 간소화 연수 · 2차시</span><span class="pg">24</span></footer>
 </div>
-<aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>대기 중 확장 활동 · ④</strong></div><div><small>지금 열 화면</small><strong>Claude / 실습 양식</strong></div><div><small>지금 할 일</small><strong>강사 안내로 파일 실습</strong></div><div><small>완료 기준</small><strong>파일 열기 또는 시연 확인</strong></div></aside></section>
+<aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>대기 중 업무팁 · ④</strong></div><div><small>지금 열 화면</small><strong>Claude / 실습 양식</strong></div><div><small>지금 할 일</small><strong>강사 안내로 파일 실습</strong></div><div><small>완료 기준</small><strong>파일 열기 또는 시연 확인</strong></div></aside></section>
 
-<section class="slide guided" data-title="한글 파일 건네고 받기" data-min="13.5" data-steps="3" data-sess="2">
+<section class="slide guided" data-title="영상 · AI 전공 대결" data-min="1" data-steps="0" data-sess="2" data-video="battle">
 <div class="in">
-  <header class="band"><div class="sec"><b>④</b>AI한테 한글파일 받기</div><div class="plan"><span>직접 해 보기</span><span class="scale"><i></i><i></i><i></i><i></i><i></i></span></div></header>
-  <h2 class="ttl">한글 파일을 <em>건네고</em>, 한글 파일로 <em>받아</em> 보세요</h2>
-  <div class="sw">
-    <div class="sw-me"><img data-hero alt=""><div class="fcard"><svg class="fi" viewBox="0 0 120 150" stroke="#3B2A22" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M12 8h64l32 32v102H12z" fill="#fff"/><path d="M76 8v32h32" fill="#EFE7DA"/><path d="M30 62h60M30 78h60M30 94h40" stroke="#CDBFAE" stroke-width="5"/><rect x="24" y="108" width="72" height="26" rx="7" fill="#2F7FC1"/><text x="60" y="127" text-anchor="middle" font-family="Jua,sans-serif" font-size="17" fill="#fff" stroke="none">HWPX</text></svg><span>내 양식.hwpx</span></div><p class="sw-l"><b>1</b>건넨다</p></div>
-    <svg class="sw-ar a1" viewBox="0 0 120 50"><path d="M4 25h96M84 9l20 16-20 16" fill="none" stroke="#3B2A22" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    <div class="win sw-win">
-      <div class="win-hd"><i></i><i></i><i></i><span class="url">claude.ai</span></div>
-      <div class="win-bd chat">
-        <p class="att" data-step="1">📎 내 양식.hwpx</p>
-        <p class="cb" data-step="2">이 양식 그대로, 내용만 ‘AI 활용 연수 계획’으로 바꿔서 한글 파일로 줘.</p>
-        <p class="ca" data-step="2">받은 파일의 양식과 내용을 직접 확인하세요.</p>
-      </div>
-    </div>
-    <p class="sw-mid"><b>2</b>말한다</p>
-    <svg class="sw-ar a2" viewBox="0 0 120 50"><path d="M4 25h96M84 9l20 16-20 16" fill="none" stroke="#3B2A22" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    <div class="sw-out" data-step="3"><div class="fcard big"><svg class="fi" viewBox="0 0 120 150" stroke="#3B2A22" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M12 8h64l32 32v102H12z" fill="#fff"/><path d="M76 8v32h32" fill="#EFE7DA"/><path d="M30 62h60M30 78h60M30 94h40" stroke="#CDBFAE" stroke-width="5"/><rect x="24" y="108" width="72" height="26" rx="7" fill="#E2553B"/><text x="60" y="127" text-anchor="middle" font-family="Jua,sans-serif" font-size="17" fill="#fff" stroke="none">HWPX</text></svg><span>완성.hwpx</span></div><span class="okst">한글에서<br>열어 확인</span><p class="sw-l"><b>3</b>받는다</p></div>
-  </div>
-  <p class="tips"><span>Claude · 파일 생성 기능 확인</span><span><b>HWPX</b> 입출력은 사전 시험한 환경에서</span><span class="me">개인정보가 없는 파일만</span></p>
-  <footer class="foot"><span>AI 업무 간소화 연수 · 2차시</span><span class="pg">25</span></footer>
+  <header class="band"><div class="sec"><b>④</b>AI한테 한글파일 받기</div><div class="plan"><span>AI마다 잘하는 일이 다릅니다</span><span class="scale"><i></i><i></i><i></i><i></i><i></i></span></div></header>
+  <div class="vid"><video controls preload="metadata" playsinline></video>
+    <div class="ph"><b>VIDEO</b><h3>AI 전공 대결</h3><p>영상이 준비되지 않았거나 재생되지 않습니다.<br>강사의 화면 시연을 보며 다음 실습을 준비해 주세요.<span data-vname hidden></span></p></div></div>
+  <footer class="foot"><span>AI 업무 간소화 연수 · 2차시</span><span class="pg">23</span></footer>
 </div>
-<aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>대기 중 확장 활동 · ④</strong></div><div><small>지금 열 화면</small><strong>Claude / 실습 양식</strong></div><div><small>지금 할 일</small><strong>강사 안내로 파일 실습</strong></div><div><small>완료 기준</small><strong>파일 열기 또는 시연 확인</strong></div></aside></section>
+<aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>대기 중 업무팁 · ④</strong></div><div><small>지금 열 화면</small><strong>Claude / 실습 양식</strong></div><div><small>지금 할 일</small><strong>강사 안내로 파일 실습</strong></div><div><small>완료 기준</small><strong>파일 열기 또는 시연 확인</strong></div></aside></section>
 
-<section class="slide transition " id="trReturn" data-title="본 과정으로 복귀 · 발표자료 확인으로 복귀" data-steps="0" data-sess="2" data-min="0.5"><div class="in"><header class="band"><div class="sec"><b>GUIDE</b>본 과정으로 복귀 · 발표자료 확인으로 복귀</div><div class="plan">집중력 강해지는 AI연수 · 2차시</div></header><div class="transition-route"><b>본 과정으로 복귀</b><span>④ 확장 활동 → ② 만들기 · 복귀</span><small>목적지: 발표자료 한 편</small></div>
+<section class="slide guided tip-slide" id="trHwp" data-title="업무팁 · 계획안을 한글파일로 받기" data-min="5" data-steps="1" data-sess="2"><div class="in"><header class="band"><div class="sec"><b>GUIDE</b>HTML을 만드는 동안 · 업무팁</div><div class="plan">집중력 강해지는 AI연수 · 2차시</div></header>
+<div class="tip-intro"><strong class="buoyant tip-word">업무팁!</strong><h2>계획안을 AI한테<br><em>한글파일로 받기</em></h2><p>HTML을 요청한 ChatGPT 대화는<br>그대로 두세요.</p><small>사전 확인한 파일 생성 환경에서 진행합니다.</small></div>
+<div class="demo-chat hwpx-chat"><div class="demo-chat-head"><span>Claude · 대화 예시</span><small>만든 계획안을 붙여 넣거나 첨부</small></div><div class="demo-chat-body"><p class="bubble user">계획안을 한글 HWPX 파일로 줘.</p><div class="bubble assistant" data-step="1"><p>계획안을 한글파일로 정리했어요.</p><div class="file-card"><b>HWPX</b><div><strong>AI_연수_계획안.hwpx</strong><small>내려받아 한글에서 내용·서식 확인</small></div><span>↓</span></div></div><p class="demo-caption">응답·파일은 설명용 예시입니다. 실제 파일을 받아 열어 확인하세요.</p></div></div><footer class="foot"><span>집중력 강해지는 AI연수 · 2차시</span><span class="pg"></span></footer></div><aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>업무팁 · ④ 한글파일</strong></div><div><small>지금 열 화면</small><strong>Claude + 만든 계획안</strong></div><div><small>지금 할 일</small><strong>HWPX 파일로 요청</strong></div><div><small>완료 기준</small><strong>파일을 한글에서 열어 확인</strong></div></aside></section>
+
+<section class="slide guided" data-title="쉬는 시간 · 발표자료 확인 전" data-min="1" data-steps="2" data-sess="2">
+<div class="in">
+  <header class="band"><div class="sec"><b>BREAK</b>쉬는 시간</div><div class="plan"><span>집중력 강해지는 AI연수 · 2차시</span><span class="scale"><i></i><i></i><i></i><i></i><i></i></span></div></header>
+  <p class="k end-k">NEXT · 쉬는 시간 10분 뒤</p>
+  <h2 class="end-msg">HTML을 요청했습니다.<br>잠시 <em>쉬었다</em> 돌아오세요</h2>
+  <p class="end-info"><b>쉬는 시간 후</b> — 원래 ChatGPT 대화로 복귀 → 확인·수정·저장</p>
+  <ol class="check"><li data-step="1"><span class="bx"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6"/></svg></span><span><b>ChatGPT 생성 상태 확인</b><small>생성 중이면 대화 그대로 두기</small></span></li><li data-step="2"><span class="bx"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6"/></svg></span><span><b>ChatGPT 대화창은 그대로 두기</b><small>같은 대화에서 결과를 확인합니다</small></span></li></ol>
+  <button class="timer" data-timer="600" style="left:900px;top:190px"><small>쉬는 시간</small><b>10:00</b><span>눌러서 시작</span></button>
+  <div class="senior brk"><p class="sb">쉬고 오세요!</p><img data-hero alt=""></div>
+  <footer class="foot"><span>AI 업무 간소화 연수 · 2차시</span><span class="pg">27</span></footer>
+</div>
+<aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>쉬는 시간</strong></div><div><small>지금 열 화면</small><strong>원래 ChatGPT 대화 유지</strong></div><div><small>지금 할 일</small><strong>잠시 쉬고 실습 복귀</strong></div><div><small>완료 기준</small><strong>강사 복귀 안내 확인</strong></div></aside></section>
+
+<section class="slide cue-slide" id="backMake" data-title="실습으로 돌아가기" data-min="0.5" data-steps="0" data-sess="2"><div class="in"><h2 class="cue-word buoyant">실습으로 돌아가기</h2><span class="pg cue-pg"></span></div></section>
+
+<section class="slide transition " id="trReturn" data-title="본 과정으로 복귀 · 발표자료 확인으로 복귀" data-steps="0" data-sess="2" data-min="0.5"><div class="in"><header class="band"><div class="sec"><b>GUIDE</b>본 과정으로 복귀 · 발표자료 확인으로 복귀</div><div class="plan">집중력 강해지는 AI연수 · 2차시</div></header><div class="transition-route"><b>본 과정으로 복귀</b><span>④ 업무팁 → ② 만들기 · 복귀</span><small>목적지: 발표자료 한 편</small></div>
 <h2 class="transition-title">지금은 <em>발표자료를 확인하고<br>저장하는 것</em>이 먼저입니다</h2>
 <div class="transition-grid"><article class="priority"><span>지금 최우선</span><h3>끝까지 확인 → 수정 → HTML 저장</h3><p><b>열 화면</b> 발표자료를 요청한 ChatGPT 대화</p></article><article><span>원래 작업</span><h3>발표자료 요청 결과를 확인할 차례</h3><p><b>그대로 둘 것</b> 한글파일 활동은 잠시 멈춤</p></article></div>
 <div class="transition-return"><b>다음 기준</b>내려받은 HTML이 직접 열리면 디자인 단계 준비</div><footer class="foot"><span>AI 업무 간소화 연수 · 2차시</span><span class="pg"></span></footer></div></section>
 
-<section class="slide guided" data-title="도착한 발표자료 확인" data-min="16.5" data-steps="4" data-sess="2" id="sAnnot">
+<section class="slide guided" data-title="도착한 발표자료 확인" data-min="15" data-steps="4" data-sess="2" id="sAnnot">
 <div class="in">
   <header class="band"><div class="sec"><b>②</b>발표자료 딸깍 만들기</div><div class="plan"><span>돌아와서 · 확인하기</span><span class="scale"><i></i><i></i><i></i><i></i><i></i></span></div></header>
   <h2 class="ttl">원래 대화로 돌아와 <em>발표자료를 확인합니다</em></h2>
@@ -1459,19 +1428,6 @@ em{font-style:normal;color:var(--accent)}
   <div class="note b" data-step="3" style="left:960px;top:486px;width:262px;transform:rotate(1.5deg)">③ 말로 고치기<small>“2번째 장 글을 절반으로 줄여 줘”</small></div>
   <div class="note g" data-step="4" style="left:1254px;top:500px;width:262px;transform:rotate(-1.5deg)">④ 내려받아 두기<small>3차시에 이 파일을 꾸밉니다</small></div>
   <footer class="foot"><span>AI 업무 간소화 연수 · 2차시</span><span class="pg">26</span></footer>
-</div>
-<aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>본 과정으로 복귀 · ②</strong></div><div><small>지금 열 화면</small><strong>발표자료 ChatGPT 대화</strong></div><div><small>지금 할 일</small><strong>확인 → 수정 → 저장</strong></div><div><small>완료 기준</small><strong>저장한 HTML 열기</strong></div></aside></section>
-
-<section class="slide guided" data-title="쉬는 시간 · 3차시 예고" data-min="1" data-steps="2" data-sess="2">
-<div class="in">
-  <header class="band"><div class="sec"><b>BREAK</b>쉬는 시간</div><div class="plan"><span>집중력 강해지는 AI연수 · 2차시</span><span class="scale"><i></i><i></i><i></i><i></i><i></i></span></div></header>
-  <p class="k end-k">NEXT · 쉬는 시간 10분 뒤</p>
-  <h2 class="end-msg">내용은 다 됐습니다.<br>이제 <em>옷</em>을 입힐 차례입니다</h2>
-  <p class="end-info"><b>3차시 · 40분</b> — 디자인 입히기 · 데이터 분석 · 내 발표자료 공유</p>
-  <ol class="check"><li data-step="1"><span class="bx"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6"/></svg></span><span><b>발표자료 HTML 내려받기</b><small>바탕 화면에 두기</small></span></li><li data-step="2"><span class="bx"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6"/></svg></span><span><b>ChatGPT 대화창은 그대로 두기</b><small>같은 대화에서 이어서 꾸밉니다</small></span></li></ol>
-  <button class="timer" data-timer="600" style="left:900px;top:190px"><small>쉬는 시간</small><b>10:00</b><span>눌러서 시작</span></button>
-  <div class="senior brk"><p class="sb">쉬고 오세요!</p><img data-hero alt=""></div>
-  <footer class="foot"><span>AI 업무 간소화 연수 · 2차시</span><span class="pg">27</span></footer>
 </div>
 <aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>본 과정으로 복귀 · ②</strong></div><div><small>지금 열 화면</small><strong>발표자료 ChatGPT 대화</strong></div><div><small>지금 할 일</small><strong>확인 → 수정 → 저장</strong></div><div><small>완료 기준</small><strong>저장한 HTML 열기</strong></div></aside></section>
 
@@ -1528,9 +1484,11 @@ em{font-style:normal;color:var(--accent)}
 </div>
 <aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>본 과정 · ③ 꾸미기</strong></div><div><small>지금 열 화면</small><strong>발표자료 ChatGPT 대화</strong></div><div><small>지금 할 일</small><strong>내용 유지·디자인 요청</strong></div><div><small>완료 기준</small><strong>요청 전송 확인</strong></div></aside></section>
 
-<section class="slide transition detour" id="trData" data-title="대기 중 확장 활동 · 디자인 대기 중 데이터 분석" data-steps="0" data-sess="3" data-min="0.5"><div class="in"><header class="band"><div class="sec"><b>GUIDE</b>대기 중 확장 활동 · 디자인 대기 중 데이터 분석</div><div class="plan">집중력 강해지는 AI연수 · 3차시</div></header><div class="transition-route"><b>대기 중 확장 활동</b><span>③ 꾸미기 → ⑤ 데이터 분석 · 샛길</span><small>목적지: 발표자료 한 편</small></div>
-<h2 class="transition-title">디자인을 요청했습니다.<br>잠시 <em>가상 데이터</em>를 살펴봅니다</h2>
-<div class="transition-grid"><article class="priority"><span>지금 최우선</span><h3>가린 자료 확인 → 오류 후보 찾기</h3><p><b>열 화면</b> 가상 엑셀 + 데이터 분석용 새 대화</p></article><article><span>원래 작업</span><h3>디자인 적용 요청 후 대기</h3><p><b>그대로 둘 것</b> 디자인을 요청한 원래 대화 유지</p></article></div>
+<section class="slide cue-slide" id="goDesign" data-title="실습하러 가기" data-min="0.25" data-steps="0" data-sess="3"><div class="in"><h2 class="cue-word buoyant">실습하러 가기</h2><span class="pg cue-pg"></span></div></section>
+
+<section class="slide transition detour" id="trData" data-title="업무팁 · AI에게 데이터 분석하게 하기" data-steps="0" data-sess="3" data-min="0.5"><div class="in"><header class="band"><div class="sec"><b>GUIDE</b>대기 중 업무팁 · 디자인 대기 중 데이터 분석</div><div class="plan">집중력 강해지는 AI연수 · 3차시</div></header><div class="transition-route"><b>대기 중 업무팁</b><span>③ 꾸미기 → ⑤ 데이터 분석 · 업무팁</span><small>목적지: 발표자료 한 편</small></div>
+<h2 class="transition-title">디자인을 요청했습니다.<br>기다리는 동안 <em class="buoyant inline-tip">업무팁!</em> 보기</h2>
+<div class="transition-grid"><article class="priority"><span>지금 최우선</span><h3>AI에게 데이터 분석하게 하기</h3><p><b>열 화면</b> 가상 엑셀 + 데이터 분석용 새 대화</p></article><article><span>원래 작업</span><h3>디자인 적용 요청 후 대기</h3><p><b>그대로 둘 것</b> 디자인을 요청한 원래 대화 유지</p></article></div>
 <div class="transition-return"><b>복귀 안내</b>강사가 복귀를 안내하면 발표자료 대화로 → 디자인 확인·저장</div><footer class="foot"><span>AI 업무 간소화 연수 · 3차시</span><span class="pg"></span></footer></div></section>
 
 <section class="slide guided" data-title="개인정보는 내 PC에서" data-min="3" data-steps="4" data-sess="3" id="sPipe">
@@ -1553,7 +1511,7 @@ em{font-style:normal;color:var(--accent)}
   <p class="moral pm">원본은 내 PC에만 둡니다. AI에는 가린 파일만 올립니다.</p>
   <footer class="foot"><span>AI 업무 간소화 연수 · 3차시</span><span class="pg">32</span></footer>
 </div>
-<aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>대기 중 확장 활동 · ⑤</strong></div><div><small>지금 열 화면</small><strong>가상 엑셀 / 가리기 도구</strong></div><div><small>지금 할 일</small><strong>남은 개인정보 확인</strong></div><div><small>완료 기준</small><strong>가린 자료 직접 확인</strong></div></aside></section>
+<aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>대기 중 업무팁 · ⑤</strong></div><div><small>지금 열 화면</small><strong>가상 엑셀 / 가리기 도구</strong></div><div><small>지금 할 일</small><strong>남은 개인정보 확인</strong></div><div><small>완료 기준</small><strong>가린 자료 직접 확인</strong></div></aside></section>
 
 <section class="slide guided" data-title="비식별화" data-min="4" data-steps="2" data-sess="3" id="sMask">
 <div class="in">
@@ -1578,7 +1536,7 @@ em{font-style:normal;color:var(--accent)}
   <div class="note p" data-step="2" style="left:1070px;top:596px;width:420px;transform:rotate(-1.5deg)">올리기 전에 한 번 더<small>다른 정보로 개인을 알아볼 수 있는지도 확인합니다</small></div>
   <footer class="foot"><span>AI 업무 간소화 연수 · 3차시</span><span class="pg">33</span></footer>
 </div>
-<aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>대기 중 확장 활동 · ⑤</strong></div><div><small>지금 열 화면</small><strong>가상 엑셀 / 가리기 도구</strong></div><div><small>지금 할 일</small><strong>남은 개인정보 확인</strong></div><div><small>완료 기준</small><strong>가린 자료 직접 확인</strong></div></aside></section>
+<aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>대기 중 업무팁 · ⑤</strong></div><div><small>지금 열 화면</small><strong>가상 엑셀 / 가리기 도구</strong></div><div><small>지금 할 일</small><strong>남은 개인정보 확인</strong></div><div><small>완료 기준</small><strong>가린 자료 직접 확인</strong></div></aside></section>
 
 <section class="slide guided" data-title="정제하고 그래프로" data-min="5" data-steps="3" data-sess="3" id="sViz">
 <div class="in">
@@ -1608,29 +1566,13 @@ em{font-style:normal;color:var(--accent)}
   <div class="note y" data-step="3" style="left:1196px;top:250px;width:310px;transform:rotate(2deg)">52 + 41 + 19 + 6 = 118?<small>숫자는 원본과 꼭 맞춰 봅니다. AI도 틀립니다.</small></div>
   <footer class="foot"><span>AI 업무 간소화 연수 · 3차시</span><span class="pg">34</span></footer>
 </div>
-<aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>대기 중 확장 활동 · ⑤</strong></div><div><small>지금 열 화면</small><strong>분석용 새 대화</strong></div><div><small>지금 할 일</small><strong>오류 후보·처리 기준 확인</strong></div><div><small>완료 기준</small><strong>변경 내역·건수 대조</strong></div></aside></section>
+<aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>대기 중 업무팁 · ⑤</strong></div><div><small>지금 열 화면</small><strong>분석용 새 대화</strong></div><div><small>지금 할 일</small><strong>오류 후보·처리 기준 확인</strong></div><div><small>완료 기준</small><strong>변경 내역·건수 대조</strong></div></aside></section>
 
-<section class="slide transition " id="trReturnDesign" data-title="본 과정으로 복귀 · 디자인 확인으로 복귀" data-steps="0" data-sess="3" data-min="0.5"><div class="in"><header class="band"><div class="sec"><b>GUIDE</b>본 과정으로 복귀 · 디자인 확인으로 복귀</div><div class="plan">집중력 강해지는 AI연수 · 3차시</div></header><div class="transition-route"><b>본 과정으로 복귀</b><span>⑤ 확장 활동 → ③ 꾸미기 · 복귀</span><small>목적지: 발표자료 한 편</small></div>
-<h2 class="transition-title">지금은 <em>디자인 확인과<br>최종 파일 저장</em>이 먼저입니다</h2>
-<div class="transition-grid"><article class="priority"><span>지금 최우선</span><h3>내용·잘림 확인 → 수정 → 최종 저장</h3><p><b>열 화면</b> 발표자료를 요청한 원래 ChatGPT 대화</p></article><article><span>원래 작업</span><h3>디자인 요청 결과를 확인할 차례</h3><p><b>그대로 둘 것</b> 데이터 분석용 대화는 잠시 멈춤</p></article></div>
-<div class="transition-return"><b>다음 기준</b>최종 HTML을 내 컴퓨터에서 열어 본 뒤 공유</div><footer class="foot"><span>AI 업무 간소화 연수 · 3차시</span><span class="pg"></span></footer></div></section>
+<section class="slide cue-slide" id="goReview" data-title="실습하러 가기" data-min="0.25" data-steps="0" data-sess="3"><div class="in"><h2 class="cue-word buoyant">실습하러 가기</h2><span class="pg cue-pg"></span></div></section>
 
-<section class="slide guided" data-title="꾸민 발표자료 손질" data-min="4.5" data-steps="0" data-sess="3">
-<div class="in">
-  <header class="band"><div class="sec"><b>③</b>발표자료 딸깍 꾸미기</div><div class="plan"><span>돌아와서 · 손질하기</span><span class="scale"><i></i><i></i><i></i><i></i><i></i></span></div></header>
-  <h2 class="ttl">디자인 결과를 확인하고, 어색한 곳은 <em>말로</em> 고칩니다</h2>
-  <div class="ph6">
-    <p style="left:80px;top:250px;transform:rotate(-2deg)" class="c1">“표지 제목을 더 크게 해 줘”</p>
-    <p style="left:600px;top:236px;transform:rotate(1.5deg)" class="c2">“2번째 장 글을 절반으로 줄여 줘”</p>
-    <p style="left:1150px;top:262px;transform:rotate(-1deg)" class="c3">“색을 조금 더 차분하게”</p>
-    <p style="left:80px;top:424px;transform:rotate(1.5deg)" class="c4">“글씨가 잘린 곳을 고쳐 줘”</p>
-    <p style="left:506px;top:446px;transform:rotate(-1.5deg)" class="c5">“5번째 장 표를 그래프로 바꿔 줘”</p>
-    <p style="left:1026px;top:420px;transform:rotate(1.5deg)" class="c6">“이 주소의 장표로 다시 입혀 줘”</p>
-  </div>
-  <p class="ph6-rule"><span><b>한 번에 한 가지씩</b></span><span><b>장 번호와 함께</b></span><span><b>“내용은 그대로”</b> 잊지 않기</span><span class="me">다 됐으면 HTML 내려받기</span></p>
-  <footer class="foot"><span>AI 업무 간소화 연수 · 3차시</span><span class="pg">35</span></footer>
-</div>
-<aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>본 과정으로 복귀 · ③</strong></div><div><small>지금 열 화면</small><strong>발표자료 ChatGPT 대화</strong></div><div><small>지금 할 일</small><strong>수정 → 최종 저장</strong></div><div><small>완료 기준</small><strong>최종 HTML 직접 열기</strong></div></aside></section>
+<section class="slide guided design-review" id="trReturnDesign" data-title="디자인 확인·수정·최종 저장" data-min="4.5" data-steps="3" data-sess="3"><div class="in"><header class="band"><div class="sec"><b>GUIDE</b>업무팁을 마치고 · 발표자료로 복귀</div><div class="plan">집중력 강해지는 AI연수 · 3차시</div></header>
+<div class="review-priority"><span class="review-tag">본 과정으로 복귀</span><h2>디자인을 확인하고<br><em>수정 후<br>최종 저장</em></h2><p>원래 ChatGPT 대화를 여세요.</p><ol><li>내용·글자 잘림 확인</li><li>장 번호와 함께 수정 요청</li><li>최종 HTML 내려받아 직접 열기</li></ol><small>데이터 분석 대화는 잠시 멈춥니다.</small></div>
+<div class="demo-chat design-chat"><div class="demo-chat-head"><span>ChatGPT · 같은 대화 이어가기</span><small>요청과 응답 예시</small></div><div class="demo-chat-body"><p class="bubble user">레퍼런스 페이지를 보고 HTML의 디자인을 수정해.<br><small>[레퍼런스 주소] · 내용은 그대로 둬.</small></p><div class="bubble assistant" data-step="1"><div class="file-card"><b>HTML</b><div><strong>발표자료_디자인.html</strong><small>디자인을 적용했어요. 열어 확인해 주세요.</small></div><span>↓</span></div></div><div class="bubble user correction" data-step="2"><b>열어 본 뒤, 필요한 수정을 알려 주세요.</b><p>“표지 제목을 더 크게 해 줘”<br>“2번째 장 글을 절반으로 줄여 줘”<br>“색을 조금 더 차분하게”<br>“글씨가 잘린 곳을 고쳐 줘”<br>“5번째 장 표를 그래프로 바꿔 줘”<br>“이 주소의 장표로 다시 입혀 줘”</p><small>한 번에 한 가지씩 · 장 번호와 함께 · 내용은 그대로</small></div><div class="bubble assistant" data-step="3"><div class="file-card"><b>HTML</b><div><strong>발표자료_최종.html</strong><small>수정했어요. 내려받아 다시 열어 확인해 주세요.</small></div><span>↓</span></div></div></div></div><footer class="foot"><span>집중력 강해지는 AI연수 · 3차시</span><span class="pg"></span></footer></div><aside class="activity-guide" aria-label="현재 실습 안내"><div><small>현재 활동</small><strong>본 과정 · ③ 꾸미기</strong></div><div><small>지금 열 화면</small><strong>원래 ChatGPT 대화</strong></div><div><small>지금 할 일</small><strong>확인 → 수정 → 최종 저장</strong></div><div><small>완료 기준</small><strong>최종 HTML 직접 열기</strong></div></aside></section>
 
 <section class="slide guided mapS" data-title="퇴근길 지도 · ⑥으로" data-min="0.5" data-steps="0" data-sess="3">
 <div class="in">
@@ -1666,7 +1608,7 @@ em{font-style:normal;color:var(--accent)}
   <p class="k end-k">ARRIVED · 발표자료 한 편을 내 컴퓨터에</p>
   <h2 class="end-msg">도착했습니다.<br><em>집중력</em>, 강해지셨나요?</h2>
   <p class="end-info"><b>내일 아침</b> — AI 신규직원에게 첫 업무를 맡겨 보세요</p>
-  <ol class="check"><li data-step="1"><span class="bx"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6"/></svg></span><span><b>발표자료 한 편 · 저장하고 직접 열기</b><small>내용 확인 → 디자인 적용 → 수정 → 저장·공유</small></span></li><li data-step="2"><span class="bx"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6"/></svg></span><span><b>대기 중 확장 활동도 경험</b><small>한글파일 받기 · 가린 데이터 분석</small></span></li><li data-step="3"><span class="bx"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6"/></svg></span><span><b>개인정보는 가리고, 결재는 내가</b><small>확인과 결정은 사람이 합니다</small></span></li></ol>
+  <ol class="check"><li data-step="1"><span class="bx"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6"/></svg></span><span><b>발표자료 한 편 · 저장하고 직접 열기</b><small>내용 확인 → 디자인 적용 → 수정 → 저장·공유</small></span></li><li data-step="2"><span class="bx"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6"/></svg></span><span><b>대기 중 업무팁도 경험</b><small>한글파일 받기 · 가린 데이터 분석</small></span></li><li data-step="3"><span class="bx"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6"/></svg></span><span><b>개인정보는 가리고, 결재는 내가</b><small>확인과 결정은 사람이 합니다</small></span></li></ol>
   <svg class="toon-svg end-toon" id="endToon" viewBox="0 0 800 640" role="img" aria-label="집에 도착한 교직원, 집 창에 불이 켜짐"></svg>
   <p class="cap" style="left:900px;top:684px">FIG. — 도착 · 집중력 완성</p>
   <footer class="foot"><span>AI 업무 간소화 연수 · 3차시</span><span class="pg">38</span></footer>
@@ -1731,7 +1673,7 @@ const NOTES = [
     "보조 강사는 ChatGPT·Claude의 새 대화 입력 가능 여부와 실제 파일 생성 도구·사용 한도를 확인합니다. 로그인 지원을 받은 뒤에는 화면 하단 안내를 보고 강의에 다시 합류합니다."
   ],
   [
-    "필수 결과물은 내용을 확인하고 디자인을 적용한 HTML 발표자료 1개입니다. 한글과 데이터 분석은 생성 대기 중 확장 활동입니다.",
+    "필수 결과물은 내용을 확인하고 디자인을 적용한 HTML 발표자료 1개입니다. 한글과 데이터 분석은 생성 대기 중 업무팁입니다.",
     "1차시는 주강사 설명과 로그인 지원을 병행하는 30분입니다. 참여자는 설명을 들으며 ChatGPT·Claude에 로그인하고, 보조 강사는 막힌 분을 개별 지원합니다."
   ],
   [
@@ -1812,7 +1754,7 @@ const NOTES = [
     "실습 자료가 준비 중이면 개인 업무파일 업로드를 요구하지 않습니다. 준비된 자료와 기능을 확인한 경우에만 파일 실습합니다."
   ],
   [
-    "이 지도는 강의의 현재 위치이며 AI 생성률이나 개인의 완료율이 아닙니다. 점선의 ④⑤는 대기 중 확장 활동입니다.",
+    "이 지도는 강의의 현재 위치이며 AI 생성률이나 개인의 완료율이 아닙니다. 점선의 ④⑤는 대기 중 업무팁입니다.",
     "미완료자는 보조 강사 지원을 받고, 지금 우선할 본 과정으로 돌아옵니다."
   ],
   [
@@ -1826,25 +1768,14 @@ const NOTES = [
     "영상 속 계정·모델·기능은 촬영 시점 예시이며 현재 계정 조건을 확인합니다."
   ],
   [
-    "상황=분홍, 참고자료=파랑, 결과물=초록, 기준=노랑. 이 예시는 참고자료 없이 처음 계획안을 만드는 요청입니다. 대상·시간은 상황에 포함합니다.",
-    "ChatGPT의 현재 대화를 계속 유지합니다. 받은 계획안의 대상·시간·활동을 확인한 뒤 다음 단계로 갑니다."
+    "이 한 장에서 계획안 요청→내용 확인→같은 대화에서 HTML 요청까지 모두 설명한 뒤, 다음 실습하러 가기 장표에서 AI 창으로 전환합니다.",
+    "상황=분홍, 참고자료=파랑, 결과물=초록, 기준=노랑. 첫 요청에는 참고자료가 없고, 두 번째 요청에서는 방금 생성해 확인한 계획안이 참고자료입니다.",
+    "HTML 생성 요청을 보낸 뒤 원래 대화를 닫지 않습니다. 생성 대기 동안 한글파일 업무팁을 보여 줍니다."
   ],
   [
-    "전체 위치: ② 만들기 · 계획안 → 슬라이드. 지금은 HTML 발표자료 생성 요청. 열 화면: 계획안을 만든 ChatGPT 대화.",
-    "유지할 화면: 현재 대화와 계획안 유지. 다음 기준: 요청을 보낸 뒤, 강사의 안내에 맞춰 확장 활동으로 이동.",
-    "이 장표는 강의 순서 안내입니다. AI의 실제 생성 완료를 감지하지 않습니다.",
-    "먼저 끝난 분은 기존 대화와 파일을 그대로 두고 지금 활동을 따라옵니다. 아직 생성 중이면 중복 요청하지 않습니다. 복귀 시에도 미완료면 보조 강사가 상태를 확인하고, 예제가 등록되어 있는 경우 예제로 참여하거나 강사 시연에서 점검 기준을 익힙니다."
-  ],
-  [
-    "같은 대화창에서 이어서 요청. 오른쪽 말풍선을 따라 치게 한 뒤, 보내기 직전에 멈추게 하기.",
-    "클릭할 때마다 \"하나 · 둘 · 셋 · 전송!\" — 다 같이 외치고 동시에 보냅니다. 기다리는 시간을 맞추려는 것.",
-    "보낸 뒤 \"손 떼고 앞 화면 봐 주세요\" → 다음 장."
-  ],
-  [
-    "전체 위치: ② 만들기 → ④ 한글파일 · 샛길. 지금은 강사 안내에 따라 파일 기능 확인. 열 화면: Claude + 실습용 한글 양식.",
-    "유지할 화면: 발표자료를 요청한 ChatGPT 대화. 다음 기준: 강사가 복귀를 안내하면 원래 대화로 → 확인·수정·저장.",
-    "이 장표는 강의 순서 안내입니다. AI의 실제 생성 완료를 감지하지 않습니다.",
-    "먼저 끝난 분은 기존 대화와 파일을 그대로 두고 지금 활동을 따라옵니다. 아직 생성 중이면 중복 요청하지 않습니다. 복귀 시에도 미완료면 보조 강사가 상태를 확인하고, 예제가 등록되어 있는 경우 예제로 참여하거나 강사 시연에서 점검 기준을 익힙니다."
+    "이 장표를 신호로 AI 창을 띄웁니다. 화면에는 행동 문장만 크게 보여 줍니다. 주강사·보조 강사는 진행 상황을 살피며 돕습니다.",
+    "계획안 요청·확인 후 바로 같은 대화에서 HTML로 만들어 달라고 요청합니다. 준비된 사람부터 진행하며 로그인·사용량 문제는 보조 강사가 돕습니다.",
+    "HTML 요청을 보냈으면 그 대화를 유지하고 강사가 안내하는 업무팁에 참여합니다. 이 문구는 실제 생성 상태 표시가 아닙니다."
   ],
   [
     "영상 파일이 실제 연결되어 있을 때만 재생합니다. 미등록/재생 실패 시 강사가 동일 과정을 화면으로 시연합니다.",
@@ -1859,10 +1790,19 @@ const NOTES = [
     "공식 업로드/생성 지원 목록에서 HWP/HWPX 기본 지원을 확인하지 못했습니다. 미지원 단정은 아니며 코드·도구·스킬 등 환경에 따라 가능할 수 있습니다. 강사의 사전 검증 환경에서만 시연/실습하고 형식 보존을 보장하지 않습니다.",
     "첨부가 막히면 반복 업로드하지 말고 강사 시연으로 참여합니다. HWPX가 실제 생성된 경우 한글에서 표·쪽 나눔·누락을 확인합니다. 확장자 이름만 바꾸는 것은 변환이 아닙니다.",
     "<a href=\"https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude\" target=\"_blank\" rel=\"noopener\">파일 생성 조건</a> · <a href=\"https://support.claude.com/en/articles/8241126-upload-files-to-claude\" target=\"_blank\" rel=\"noopener\">지원 형식</a> / 2026.11.14. 확인",
-    "HWP와 HWPX는 다른 형식입니다. 확장자를 바꾸지 말고 한글의 다른 이름으로 저장 기능을 이용합니다. 사전 검증한 도구·계정·양식이 없거나 자료실이 준비 중이면 무리한 업로드 대신 강사 시연·내용 작성으로 진행하고 본 과정으로 돌아옵니다. 원형 유지·다운로드·한글에서 열기까지 확인해야 성공입니다."
+    "HWP와 HWPX는 다른 형식입니다. 확장자를 바꾸지 말고 한글의 다른 이름으로 저장 기능을 이용합니다. 사전 검증한 도구·계정·양식이 없거나 자료실이 준비 중이면 무리한 업로드 대신 강사 시연·내용 작성으로 진행하고 본 과정으로 돌아옵니다. 원형 유지·다운로드·한글에서 열기까지 확인해야 성공입니다.",
+    "양식을 그대로 보존하는 실습 대신 만든 계획안을 HWPX로 받는 업무팁입니다. Claude에 계획안을 붙여 넣거나 지원되는 형식으로 첨부하고 요청합니다. 화면의 파일 카드는 예시이며 가짜 다운로드 링크를 만들지 않습니다.",
+    "업무팁 다음은 쉬는 시간입니다. 원래 ChatGPT 대화를 유지하고 쉬었다가 실습으로 복귀합니다."
   ],
   [
-    "전체 위치: ④ 확장 활동 → ② 만들기 · 복귀. 지금은 끝까지 확인 → 수정 → HTML 저장. 열 화면: 발표자료를 요청한 ChatGPT 대화.",
+    "HTML 생성 요청과 한글파일 업무팁 뒤의 쉬는 시간입니다. 10분 타이머를 눌러 시작합니다.",
+    "원래 ChatGPT 대화를 유지합니다. 먼저 끝난 사람은 결과를 보관합니다. 아직 생성 중이면 중복 요청하지 않습니다. 다음 신호에서 발표자료 확인·수정·저장으로 돌아갑니다."
+  ],
+  [
+    "이 장표를 신호로 AI 창을 띄웁니다. 화면에는 행동 문장만 크게 보여 줍니다. 주강사·보조 강사는 진행 상황을 살피며 돕습니다."
+  ],
+  [
+    "전체 위치: ④ 업무팁 → ② 만들기 · 복귀. 지금은 끝까지 확인 → 수정 → HTML 저장. 열 화면: 발표자료를 요청한 ChatGPT 대화.",
     "유지할 화면: 한글파일 활동은 잠시 멈춤. 다음 기준: 내려받은 HTML이 직접 열리면 디자인 단계 준비.",
     "이 장표는 강의 순서 안내입니다. AI의 실제 생성 완료를 감지하지 않습니다.",
     "먼저 끝난 분은 기존 대화와 파일을 그대로 두고 지금 활동을 따라옵니다. 아직 생성 중이면 중복 요청하지 않습니다. 복귀 시에도 미완료면 보조 강사가 상태를 확인하고, 예제가 등록되어 있는 경우 예제로 참여하거나 강사 시연에서 점검 기준을 익힙니다."
@@ -1873,12 +1813,7 @@ const NOTES = [
     "사용량 제한은 새 대화로 해제되지 않습니다. 계정의 재개 시각을 확인하고 보조 강사 도움 또는 시연으로 참여합니다. 예제 파일은 실제 등록되어 있을 때만 사용합니다."
   ],
   [
-    "쉬는 시간 10분. 타이머를 누르면(또는 T 키) 시작합니다.",
-    "ChatGPT 대화창을 닫지 않게 안내 — 같은 대화에서 이어서 꾸밉니다.",
-    "보조 강사: ChatGPT·Claude 새 대화 입력 가능 여부, 본인 인증·로그인 오류, 현재 파일 생성 도구와 사용 한도를 확인합니다. 인증정보는 연수생이 직접 입력합니다. 원래 발표자료 대화의 위치를 잃지 않도록 탭을 유지합니다."
-  ],
-  [
-    "이 지도는 강의의 현재 위치이며 AI 생성률이나 개인의 완료율이 아닙니다. 점선의 ④⑤는 대기 중 확장 활동입니다.",
+    "이 지도는 강의의 현재 위치이며 AI 생성률이나 개인의 완료율이 아닙니다. 점선의 ④⑤는 대기 중 업무팁입니다.",
     "미완료자는 보조 강사 지원을 받고, 지금 우선할 본 과정으로 돌아옵니다."
   ],
   [
@@ -1899,7 +1834,10 @@ const NOTES = [
     "화면의 디자인 변화와 전송 도장은 설명용 애니메이션이며 연수생 작업의 실제 생성 상태가 아닙니다. URL을 읽지 못하는 환경에서는 레퍼런스 화면을 캡처해 첨부하고 디자인 특징을 함께 설명합니다."
   ],
   [
-    "전체 위치: ③ 꾸미기 → ⑤ 데이터 분석 · 샛길. 지금은 가린 자료 확인 → 오류 후보 찾기. 열 화면: 가상 엑셀 + 데이터 분석용 새 대화.",
+    "이 장표를 신호로 AI 창을 띄웁니다. 화면에는 행동 문장만 크게 보여 줍니다. 주강사·보조 강사는 진행 상황을 살피며 돕습니다."
+  ],
+  [
+    "전체 위치: ③ 꾸미기 → ⑤ 데이터 분석 · 업무팁. 지금은 가린 자료 확인 → 오류 후보 찾기. 열 화면: 가상 엑셀 + 데이터 분석용 새 대화.",
     "유지할 화면: 디자인을 요청한 원래 대화 유지. 다음 기준: 강사가 복귀를 안내하면 발표자료 대화로 → 디자인 확인·저장.",
     "이 장표는 강의 순서 안내입니다. AI의 실제 생성 완료를 감지하지 않습니다.",
     "먼저 끝난 분은 기존 대화와 파일을 그대로 두고 지금 활동을 따라옵니다. 아직 생성 중이면 중복 요청하지 않습니다. 복귀 시에도 미완료면 보조 강사가 상태를 확인하고, 예제가 등록되어 있는 경우 예제로 참여하거나 강사 시연에서 점검 기준을 익힙니다."
@@ -1917,19 +1855,15 @@ const NOTES = [
     "클릭 ① 오류 후보를 표시, ② 예시 그래프, ③ 전후 건수와 변경 내역을 대조합니다. 실습 결과가 항상 118건이 된다는 뜻이 아닙니다."
   ],
   [
-    "전체 위치: ⑤ 확장 활동 → ③ 꾸미기 · 복귀. 지금은 내용·잘림 확인 → 수정 → 최종 저장. 열 화면: 발표자료를 요청한 원래 ChatGPT 대화.",
-    "유지할 화면: 데이터 분석용 대화는 잠시 멈춤. 다음 기준: 최종 HTML을 내 컴퓨터에서 열어 본 뒤 공유.",
-    "이 장표는 강의 순서 안내입니다. AI의 실제 생성 완료를 감지하지 않습니다.",
-    "먼저 끝난 분은 기존 대화와 파일을 그대로 두고 지금 활동을 따라옵니다. 아직 생성 중이면 중복 요청하지 않습니다. 복귀 시에도 미완료면 보조 강사가 상태를 확인하고, 예제가 등록되어 있는 경우 예제로 참여하거나 강사 시연에서 점검 기준을 익힙니다."
+    "이 장표를 신호로 AI 창을 띄웁니다. 화면에는 행동 문장만 크게 보여 줍니다. 주강사·보조 강사는 진행 상황을 살피며 돕습니다."
   ],
   [
-    "ChatGPT로 돌아와 꾸민 결과 확인. 말풍선 여섯 개는 그대로 따라 써도 되는 고침 말.",
-    "규칙 세 가지: 한 번에 한 가지씩 · 장 번호와 함께 · \"내용은 그대로\".",
-    "마음에 안 들면 다른 장표 주소로 한 번 더. 다 됐으면 완성본 HTML 내려받기.",
-    "보여 줄 분 2~3명을 이때 미리 부탁해 두기."
+    "오른쪽은 예시 대화입니다. ① 디자인을 적용한 HTML 받기 ② 실제 파일을 보고 필요한 수정 한 가지 요청하기 ③ 수정한 HTML 받기 순으로 클릭합니다.",
+    "수정 예시 여섯 개는 선택지입니다. 모두 한꺼번에 보내라는 뜻이 아닙니다. 내용 유지와 장 번호를 함께 알려 줍니다.",
+    "완료 파일의 내용·배치·키보드 이동을 확인한 뒤 최종 저장합니다. 작업 중이면 중복 요청하지 말고 상태를 확인합니다."
   ],
   [
-    "이 지도는 강의의 현재 위치이며 AI 생성률이나 개인의 완료율이 아닙니다. 점선의 ④⑤는 대기 중 확장 활동입니다.",
+    "이 지도는 강의의 현재 위치이며 AI 생성률이나 개인의 완료율이 아닙니다. 점선의 ④⑤는 대기 중 업무팁입니다.",
     "미완료자는 보조 강사 지원을 받고, 지금 우선할 본 과정으로 돌아옵니다."
   ],
   [
@@ -1945,7 +1879,7 @@ const NOTES = [
   ],
   [
     "내 컴퓨터에서 열리는 최종 HTML을 확인합니다. 열기·키 이동·내용·디자인을 확인한 파일이 핵심 결과물입니다.",
-    "확장 활동은 경험으로 정리하고 필수 결과물 완성과 구분합니다. 미완료자는 어디까지 했는지 표시하고 이어갈 수정 요청을 남깁니다."
+    "업무팁은 경험으로 정리하고 필수 결과물 완성과 구분합니다. 미완료자는 어디까지 했는지 표시하고 이어갈 수정 요청을 남깁니다."
   ]
 ];
 
@@ -2321,7 +2255,7 @@ document.querySelectorAll('.timer').forEach(b=>{
 });
 
 /* ===================== 퇴근길 지도 =====================
-   회사 → ① → ② → ③ → ⑥ → 집. ④⑤는 기다리는 동안 들르는 샛길(점선). */
+   회사 → ① → ② → ③ → ⑥ → 집. ④⑤는 기다리는 동안 들르는 업무팁(점선). */
 function routeMap(svg){
   const from=+svg.dataset.from, to=+svg.dataset.to, done=(svg.dataset.done||'').split(',').filter(Boolean).map(Number);
   const D='M150 400 C 320 400 340 240 520 240 S 720 400 900 400 S 1150 250 1290 250';
@@ -2341,11 +2275,11 @@ function routeMap(svg){
   h+=`<g transform="translate(34 252)" stroke="${INK}" stroke-width="3.5" stroke-linejoin="round"><rect x="0" y="0" width="92" height="150" rx="6" fill="#DCE6EE"/>${[0,1,2,3].map(r=>[0,1,2].map(c=>`<rect x="${12+c*25}" y="${14+r*30}" width="17" height="18" fill="#fff" stroke-width="2.5"/>`).join('')).join('')}<rect x="34" y="128" width="24" height="22" fill="#8C7B6C"/></g><text class="lab" x="80" y="236" text-anchor="middle">회사</text>`;
   // 집
   h+=`<g transform="translate(1316 128)" stroke="${INK}" stroke-width="3.5" stroke-linejoin="round"><rect x="10" y="56" width="96" height="78" fill="#FFF6E2"/><path d="M-6 60L58 6l64 54z" fill="#E2553B"/><rect x="46" y="92" width="24" height="42" fill="#8C5A3C"/><rect x="78" y="74" width="20" height="20" fill="#FFD43B" stroke-width="2.5"/><rect x="18" y="74" width="20" height="20" fill="#FFD43B" stroke-width="2.5"/><rect x="84" y="10" width="14" height="30" fill="#C9B79C"/></g><text class="lab" x="1374" y="298" text-anchor="middle">집</text>`;
-  // 샛길
+  // 업무팁
   [[4,2,112,-128],[5,3,84,-152]].forEach(([k,of,dx,dy])=>{ const p=P(T[of]), x=p.x+dx, y=p.y+dy;
     h+=`<path d="M${f1(p.x+14)} ${f1(p.y-26)} Q ${f1(p.x+30)} ${f1(y+18)} ${f1(x-30)} ${f1(y)}" fill="none" stroke="${INK}" stroke-width="3.5" stroke-dasharray="3 9" stroke-linecap="round"/>
     <g class="stop side ${cls(k)}"><circle cx="${f1(x)}" cy="${f1(y)}" r="25"/><text class="num" x="${f1(x)}" y="${f1(y+10)}" text-anchor="middle">${done.includes(k)?'✓':NUM[k]}</text></g>
-    <text class="lab" x="${f1(x+38)}" y="${f1(y+3)}">${NAME[k]}</text><text class="sub" x="${f1(x+38)}" y="${f1(y+28)}">대기 중 확장 활동</text>`; });
+    <text class="lab" x="${f1(x+38)}" y="${f1(y+3)}">${NAME[k]}</text><text class="sub" x="${f1(x+38)}" y="${f1(y+28)}">대기 중 업무팁</text>`; });
   // 정거장
   [1,2,3,6].forEach(k=>{ const p=P(T[k]);
     h+=`<g class="stop ${cls(k)}">${k===to?`<circle class="pulse" cx="${f1(p.x)}" cy="${f1(p.y)}" r="28"/>`:''}<circle cx="${f1(p.x)}" cy="${f1(p.y)}" r="28"/><text class="num" x="${f1(p.x)}" y="${f1(p.y+10)}" text-anchor="middle">${done.includes(k)?'✓':NUM[k]}</text></g>

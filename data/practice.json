@@ -4,7 +4,7 @@
     {
       "id": "hwpx-template",
       "name": "한글파일 실습용 양식",
-      "session": "2차시 · 대기 중 확장 활동",
+      "session": "2차시 · 대기 중 업무팁",
       "description": "Claude에 건넬 한글 양식입니다. 강사가 확인한 양식을 등록한 뒤 내려받을 수 있습니다.",
       "format": "HWPX",
       "href": null
@@ -12,7 +12,7 @@
     {
       "id": "sample-data",
       "name": "데이터 분석용 가상 자료",
-      "session": "3차시 · 대기 중 확장 활동",
+      "session": "3차시 · 대기 중 업무팁",
       "description": "개인정보 가리기와 오류 후보 찾기에 사용할 가상 엑셀 자료입니다.",
       "format": "XLSX",
       "href": null
