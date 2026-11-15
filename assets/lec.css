@@ -1,4 +1,4 @@
-/* 강의 · 영상 · 업무도구 세 페이지 공용 */
+/* 강의안 · 업무도구 두 페이지 공용 */
 :root{
   --bg:#F5F4F0; --card:#FFFFFF; --ink:#1C1E22; --soft:#62666E; --line:#E2E0DA; --chip:#ECEAE4;
   --acc:#2563A8; --acc-bg:#EAF0F8; --acc-line:#C9D7EA;
@@ -43,11 +43,28 @@ a{color:inherit}
 /* 아이콘 칸 */
 .ico{display:grid;place-items:center;width:52px;height:52px;border-radius:12px;background:var(--acc-bg);color:var(--acc)}
 .ico svg{width:26px;height:26px}
-/* 소통방 */
-.chat{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;padding:20px;border:1px solid var(--acc-line);border-radius:14px;background:var(--acc-bg)}
-.chat .ico{background:var(--acc);color:#fff}
-.chat b{display:block;font-size:17px}
-.chat p{margin:4px 0 0;font-size:14.5px;line-height:1.6;color:var(--soft)}
+/* 바로가기 배너: 머리말 바로 아래 카드 세 장. 넓은 화면은 한 줄, 좁은 화면은 가로형 카드로 쌓는다 */
+.quick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:22px 0 0}
+.qcard{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:22px 20px 18px;border:1px solid var(--line);border-radius:16px;background:var(--card);
+  text-decoration:none;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.04);transition:border-color .15s,box-shadow .15s,transform .15s}
+.qcard:hover{border-color:var(--acc);box-shadow:0 6px 18px rgba(37,99,168,.12);transform:translateY(-2px)}
+.qico{display:grid;place-items:center;width:48px;height:48px;border-radius:12px;background:var(--acc-bg);color:var(--acc);margin-bottom:8px}
+.qico svg{width:26px;height:26px}
+.qcard:first-child .qico{background:var(--acc);color:#fff}
+.qcard b{font-size:18px;font-weight:900;letter-spacing:-.02em}
+.qdesc{font-size:14px;line-height:1.6;color:var(--soft)}
+.qgo{display:inline-flex;align-items:center;gap:4px;margin-top:auto;padding-top:10px;font-size:14.5px;font-weight:700;color:var(--acc)}
+.qgo svg{width:17px;height:17px;transition:transform .15s}
+.qcard:hover .qgo svg{transform:translateX(3px)}
+@media (max-width:680px){
+  .quick{grid-template-columns:1fr;gap:10px;margin-top:18px}
+  .qcard{display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:auto auto;column-gap:14px;row-gap:2px;align-items:center;padding:14px 16px}
+  .qico{grid-row:1 / 3;width:44px;height:44px;margin:0}
+  .qcard b{font-size:16.5px}
+  .qdesc{grid-column:2;font-size:13.5px;line-height:1.5}
+  .qgo{grid-column:3;grid-row:1 / 3;margin:0;padding:0;font-size:0}
+  .qgo svg{width:20px;height:20px}
+}
 /* 단추 */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:0 18px;border-radius:10px;font:700 15px var(--f);text-decoration:none;white-space:nowrap;
   border:1px solid var(--acc);background:var(--acc);color:#fff;cursor:pointer}
@@ -72,17 +89,6 @@ a{color:inherit}
 .tags{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0 0}
 .tags span{font-size:12.5px;padding:2px 9px;border-radius:999px;background:var(--chip);color:var(--soft)}
 .acts{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
-/* 영상: 그림 칸을 누르면 그 자리에서 재생 */
-.vid{padding:0;overflow:hidden;grid-template-columns:1fr;gap:0}
-.vid .body{padding:16px 20px 20px}
-.screen{position:relative;display:block;width:100%;aspect-ratio:16/9;border:0;padding:0;background:#15171B;cursor:pointer;color:#fff}
-.screen img{width:100%;height:100%;object-fit:cover;display:block}
-.screen .play{position:absolute;inset:0;margin:auto;width:68px;height:68px;border-radius:50%;background:rgba(20,22,26,.72);display:grid;place-items:center}
-.screen .play svg{width:30px;height:30px;margin-left:4px}
-.screen .dur{position:absolute;right:10px;bottom:10px;padding:2px 8px;border-radius:6px;background:rgba(20,22,26,.8);font-size:13px;font-variant-numeric:tabular-nums}
-.screen:hover .play,.screen:focus-visible .play{background:var(--acc)}
-.screen iframe,.screen video{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
-.vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,400px),1fr));gap:16px}
 /* 빈 화면 */
 .empty{display:flex;flex-direction:column;align-items:center;gap:10px;padding:56px 16px;border:1px dashed var(--line);border-radius:14px;text-align:center;color:var(--soft);font-size:15px;line-height:1.6;grid-column:1 / -1}
 .empty .ico{background:var(--chip);color:var(--soft)}
@@ -94,15 +100,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset
   .tabs a:first-child{margin-left:-10px}
   .tabs a.ext{padding:0 10px;font-size:13.5px;margin-left:12px}
   .tabs .sep{margin:14px 4px}
-  .chat{grid-template-columns:auto 1fr}
-  .chat .btn{grid-column:1 / -1}
   .item{grid-template-columns:1fr;gap:10px}
   .item .ico{width:40px;height:40px;border-radius:10px}
   .item .ico svg{width:22px;height:22px}
   .acts .btn{flex:1 1 auto}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
-@media print{.tabs,.seg,.chat{display:none}.hero{background:none}.item{break-inside:avoid}}
+@media print{.tabs,.seg,.quick{display:none}.hero{background:none}.item{break-inside:avoid}}
 /* 아주 좁은 화면(360px 안팎): 바깥 단추의 아이콘을 빼서 탭 줄이 한 화면에 들어가게 */
 @media (max-width:380px){.tabs a.ext{margin-left:6px;padding:0 9px}.tabs a.ext svg{display:none}}
 

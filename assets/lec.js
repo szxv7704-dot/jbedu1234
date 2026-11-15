@@ -1,4 +1,4 @@
-// 연수 자료실 세 페이지(강의안 · 강의 영상 · 업무도구) 공용. <body data-page="deck | video | tool">이 어느 데이터를 읽을지 정한다
+// 연수 자료실 두 페이지(강의안 · 업무도구) 공용. <body data-page="deck | tool">이 어느 데이터를 읽을지 정한다
 (() => {
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -7,16 +7,12 @@ const href = p => /^(https?:)?\/\//.test(p) ? p : String(p).replace(/^\.?\//, ''
 const svg = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
 const ICON = {
   deck: svg('<path d="M3 4h18"/><path d="M4 4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-10"/><path d="M12 16v4"/><path d="M9 20h6"/><path d="M8 12l3 -3l2 2l3 -3"/>'),
-  video: svg('<path d="M15 10l4.55 -2.28a1 1 0 0 1 1.45 .9v6.76a1 1 0 0 1 -1.45 .9l-4.55 -2.28v-4z"/><path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"/>'),
   tool: svg('<path d="M7 10h3v-3l-3.5 -3.5a6 6 0 0 1 8 8l6 6a2 2 0 0 1 -3 3l-6 -6a6 6 0 0 1 -8 -8l3.5 3.5"/>'),
-  chat: svg('<path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"/><path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2"/>'),
   out: svg('<path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"/><path d="M11 13l9 -9"/><path d="M15 4h5v5"/>'),
-  down: svg('<path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"/><path d="M7 11l5 5l5 -5"/><path d="M12 4v12"/>'),
-  play: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4v16l13 -8z"/></svg>'
+  down: svg('<path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"/><path d="M7 11l5 5l5 -5"/><path d="M12 4v12"/>')
 };
 const PAGE = {
   deck: {data: 'lectures.json', unit: '강의', empty: '아직 올린 강의안이 없습니다.<br>강의안이 올라오면 여기에 보입니다.'},
-  video: {data: 'videos.json', unit: '영상', empty: '아직 올린 강의 영상이 없습니다.<br>영상이 올라오면 여기에 보입니다.'},
   tool: {data: 'tools.json', unit: '도구', empty: '아직 올린 업무도구가 없습니다.<br>도구와 예제파일이 올라오면 여기에 보입니다.'}
 };
 const page = document.body.dataset.page, P = PAGE[page];
@@ -41,23 +37,10 @@ const CARD = {
     if (x.deck) a.push(`<a class="btn" href="${esc(href(x.deck))}" target="_blank" rel="noopener">강의안 열기 ${ICON.out}</a>`);
     if (x.id === 'ai-work-simplify') a.push('<a class="btn ghost" href="#practice">실습 자료 받기</a>');
     if (x.pdf) a.push(`<a class="btn ghost" href="${esc(href(x.pdf))}" download>${ICON.down} PDF</a>`);
-    if (x.video) a.push(`<a class="btn ghost" href="videos.html#${esc(x.video)}">${ICON.video} 강의 영상</a>`);
     a.push(...files(x));
     if (!a.length) a.push(`<span class="btn ghost" aria-disabled="true">${s === 'done' || !s ? '자료 정리 중' : '강의 후 올라옵니다'}</span>`);
     return `<li class="item${s === 'done' ? ' done' : ''}" id="${esc(x.id || '')}"><span class="ico">${ICON.deck}</span><div>${when(x)}<h3>${esc(x.title)}</h3>
       ${x.desc ? `<p>${esc(x.desc)}</p>` : ''}${meta([x.time, x.place, x.audience])}${tags(x)}<div class="acts">${a.join('')}</div></div></li>`;
-  },
-  video(x){
-    const yt = ytId(x.youtube || x.url || ''), thumb = x.thumb ? href(x.thumb) : yt ? `https://i.ytimg.com/vi/${yt}/hqdefault.jpg` : '';
-    const playable = yt || x.src;
-    const screen = playable ? `<button type="button" class="screen" data-yt="${esc(yt || '')}" data-src="${esc(x.src ? href(x.src) : '')}" aria-label="${esc(x.title)} 재생">
-        ${thumb ? `<img src="${esc(thumb)}" alt="" loading="lazy">` : ''}<span class="play">${ICON.play}</span>${x.duration ? `<span class="dur">${esc(x.duration)}</span>` : ''}</button>` : '';
-    const a = [];
-    if (!playable && x.url) a.push(`<a class="btn" href="${esc(x.url)}" target="_blank" rel="noopener">영상 보기 ${ICON.out}</a>`);
-    if (x.lecture) a.push(`<a class="btn ghost" href="index.html#${esc(x.lecture)}">${ICON.deck} 강의안</a>`);
-    a.push(...files(x));
-    return `<li class="item vid" id="${esc(x.id || '')}">${screen}<div class="body">${when(x)}<h3>${esc(x.title)}</h3>
-      ${x.desc ? `<p>${esc(x.desc)}</p>` : ''}${meta([!playable && x.duration, x.speaker])}${tags(x)}${a.length ? `<div class="acts">${a.join('')}</div>` : ''}</div></li>`;
   },
   tool(x){
     const a = [];
@@ -68,13 +51,6 @@ const CARD = {
       ${x.desc ? `<p>${esc(x.desc)}</p>` : ''}${meta([x.how])}${tags(x)}<div class="acts">${a.join('')}</div></div></li>`;
   }
 };
-// 유튜브 주소 모양 여럿(watch?v= · youtu.be/ · shorts/ · embed/ · 아이디만)에서 아이디만
-function ytId(u){
-  if (/^[\w-]{11}$/.test(u)) return u;
-  const m = String(u).match(/(?:youtu\.be\/|[?&]v=|\/(?:shorts|embed|live)\/)([\w-]{11})/);
-  return m ? m[1] : '';
-}
-
 let data = null, pick = '';
 function render(){
   const items = data.items;
@@ -89,20 +65,9 @@ function render(){
   } else if (items.some(x => x.date)) {
     rows = items.slice().sort((a, b) => (b.date ? ymd(b.date) : 0) - (a.date ? ymd(a.date) : 0));   // 최근부터
   }
-  const c = data.chat;
-  const chat = c && page === 'deck' && pick !== 'done' ? `<li class="chat"><span class="ico">${ICON.chat}</span><div><b>${esc(c.title || '강의 소통방')}</b>${c.desc ? `<p>${esc(c.desc)}</p>` : ''}</div>
-    ${c.url ? `<a class="btn" href="${esc(c.url)}" target="_blank" rel="noopener">들어가기 ${ICON.out}</a>` : '<span class="btn" aria-disabled="true">준비 중</span>'}</li>` : '';
-  $('#list').className = page === 'video' && rows.length ? 'list vids' : 'list';
-  $('#list').innerHTML = chat + (rows.length ? rows.map(CARD[page]).join('') : `<li class="empty"><span class="ico">${ICON[page]}</span>${P.empty}</li>`);
+  $('#list').innerHTML = (rows.length ? rows.map(CARD[page]).join('') : `<li class="empty"><span class="ico">${ICON[page]}</span>${P.empty}</li>`);
 }
 
-// 영상: 누를 때만 재생기를 넣는다(처음부터 넣으면 목록이 무겁고, 유튜브가 미리 쿠키를 심는다)
-document.addEventListener('click', e => {
-  const s = e.target.closest('.screen'); if (!s || s.querySelector('iframe,video')) return;
-  if (s.dataset.yt) s.insertAdjacentHTML('beforeend', `<iframe src="https://www.youtube-nocookie.com/embed/${esc(s.dataset.yt)}?autoplay=1&rel=0" title="${esc(s.getAttribute('aria-label'))}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`);
-  else if (s.dataset.src) { s.insertAdjacentHTML('beforeend', `<video src="${esc(s.dataset.src)}" controls autoplay playsinline></video>`); }
-  s.style.cursor = 'default';
-});
 $('#seg')?.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; pick = b.dataset.s; render(); });
 
 fetch('data/' + P.data, {cache: 'no-cache'}).then(r => r.json()).then(d => {

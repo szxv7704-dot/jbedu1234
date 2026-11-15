@@ -1,11 +1,10 @@
 # 연수 자료실
 
-연수 강의안 · 강의 영상 · 업무도구(예제파일)를 모아 두는 저장소입니다. GitHub Pages로 공개되며 빌드 단계가 없습니다(`main`에 올리면 1~2분 뒤 반영).
+연수 강의안 · 업무도구(예제파일)를 모아 두는 저장소입니다. GitHub Pages로 공개되며 빌드 단계가 없습니다(`main`에 올리면 1~2분 뒤 반영).
 
 | 페이지 | 데이터 | 파일 |
 |---|---|---|
 | `index.html` 강의안 | `data/lectures.json` | `lectures/{id}/` |
-| `videos.html` 강의 영상 | `data/videos.json` | 유튜브(일부 공개) 주소만 |
 | `tools.html` 업무도구 | `data/tools.json` | `tools/{id}/` |
 
 화면 틀은 `assets/lec.css` · `assets/lec.js` 하나를 같이 씁니다. 내용은 데이터 파일만 고칩니다. 목록이 비면 빈 화면 안내가 나옵니다.
@@ -26,18 +25,16 @@
   "tags": ["보고서", "프롬프트"],
   "deck": "lectures/2026-12-report-ai/slides.html",
   "pdf": "lectures/2026-12-report-ai/slides.pdf",
-  "video": "영상 id(있으면)",
   "files": [{"name": "실습파일", "href": "lectures/2026-12-report-ai/practice.zip", "kind": "ZIP"}]
 }
 ```
 
 - 예정 · 오늘 · 완료는 적지 않습니다. `date`로 저절로 붙고, 예정(가까운 순) → 완료(최근 순)로 놓입니다.
-- 소통방은 `lectures.json` 맨 위에 `"chat": {"title": "강의 소통방", "desc": "…", "url": "…"}`(없으면 안 보임, url이 비면 '준비 중').
 
-## 영상
 
-`data/videos.json`의 `items`: `id` · `title` · `date` · `desc` · `duration` · `speaker` · `youtube`(주소나 아이디) 또는 `url`(그 밖의 링크) · `lecture`(강의 `id`로 서로 잇기).
-영상 파일은 저장소에 넣지 않습니다(한 파일 100MB 제한, 이력에 영구히 쌓임).
+## 바로가기 배너
+
+`index.html` 머리말 바로 아래 카드 세 장(강의 소통방 · 디자인 레퍼런스 · 전북GPT). 주소를 바꾸려면 `index.html`의 `<nav class="quick">` 안 `href`만 고칩니다.
 
 ## 업무도구
 
