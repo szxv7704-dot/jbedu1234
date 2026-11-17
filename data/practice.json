@@ -21,9 +21,9 @@
       "id": "sample-data",
       "name": "데이터 분석용 가상 자료",
       "session": "3차시 · 대기 중 업무팁",
-      "description": "개인정보 가리기와 오류 후보 찾기에 사용할 가상 엑셀 자료입니다.",
-      "format": "XLSX",
-      "href": null
+      "description": "개인정보 가리기와 오류 후보 찾기에 사용할 가상 엑셀 자료입니다. 신청 150건, 이름·연락처·주민번호는 모두 가상 정보입니다.",
+      "format": "XLSX · 150건",
+      "href": "practice/ai-data-practice-virtual-150.xlsx"
     },
     {
       "id": "presentation-reference",
