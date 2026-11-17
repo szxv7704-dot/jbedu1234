@@ -6,7 +6,7 @@
  function fileUrl(path) {
   if (!path || typeof path !== 'string') return null;
   const u=new URL(path,document.baseURI);
-  return u.origin===location.origin && /\.(hwpx|xlsx|html|pdf|zip)$/i.test(u.pathname) ? u : null;
+  return u.origin===location.origin && /\.(hwpx|xlsx|html|pdf|zip|mp3)$/i.test(u.pathname) ? u : null;
  }
  fetch('data/practice.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error();return r.json();}).then(data=>{
   root.replaceChildren();
@@ -15,6 +15,8 @@
    card.append(text('p',item.session,'practice-session'),text('h3',item.name),text('p',item.description,'practice-desc'));
    const bottom=text('div','','practice-bottom');bottom.append(text('span',item.format,'practice-format'));
    const url=fileUrl(item.href);
+   // mp3는 카드 안에서 바로 재생(가로 전체 폭)
+   if(url && /\.mp3$/i.test(url.pathname)){card.classList.add('practice-audio');const au=document.createElement('audio');au.controls=true;au.preload='metadata';au.src=url.href;au.setAttribute('aria-label',item.name+' 재생');card.append(au);}
    if(url){const a=text('a','다운로드','btn');a.href=url.href;a.download='';a.setAttribute('aria-label',item.name+' 다운로드');bottom.append(a);}
    else {const pending=text('span','준비 중','btn ghost');pending.setAttribute('aria-disabled','true');bottom.append(pending);}
    card.append(bottom);root.append(card);
