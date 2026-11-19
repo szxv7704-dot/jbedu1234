@@ -36,7 +36,7 @@ const CARD = {
     const s = stateOf(x), a = [];
     if (x.deck) a.push(`<a class="btn" href="${esc(href(x.deck))}" target="_blank" rel="noopener">강의안 열기 ${ICON.out}</a>`);
     if (x.id === 'ai-work-simplify') a.push('<a class="btn ghost" href="#practice">실습 자료 받기</a>');
-    if (x.pdf) a.push(`<a class="btn ghost" href="${esc(href(x.pdf))}" download>${ICON.down} PDF</a>`);
+    if (x.pdf) a.push(`<a class="btn ghost" href="${esc(href(x.pdf))}" download>${ICON.down} 강의안 다운받기</a>`);
     a.push(...files(x));
     if (!a.length) a.push(`<span class="btn ghost" aria-disabled="true">${s === 'done' || !s ? '자료 정리 중' : '강의 후 올라옵니다'}</span>`);
     return `<li class="item${s === 'done' ? ' done' : ''}" id="${esc(x.id || '')}"><span class="ico">${ICON.deck}</span><div>${when(x)}<h3>${esc(x.title)}</h3>

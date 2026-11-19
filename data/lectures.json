@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "items": [
     {
       "id": "ai-work-simplify",
@@ -13,7 +13,8 @@
         "데이터 분석",
         "개인정보 가리기"
       ],
-      "deck": "lectures/ai-work-simplify/slides.html?v=20261118-r1"
+      "deck": "lectures/ai-work-simplify/slides.html?v=20261118-r1",
+      "pdf": "lectures/ai-work-simplify/slides.pdf"
     }
   ]
 }
